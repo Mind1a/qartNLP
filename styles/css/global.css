@@ -146,4 +146,101 @@ table {
 
 button {
   cursor: pointer;
+}
+
+@font-face {
+  font-family: "Firago";
+  src: url("../fonts/FiraGO/Roman/FiraGO-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Firago", sans-serif;
+}
+body header .header_wrapper {
+  background-color: #496ac1;
+  padding: 20px 0;
+}
+body header .header_wrapper .container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .header_wrapper .container .navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 73px;
+       column-gap: 73px;
+}
+body header .header_wrapper .container .navigation nav ul li:nth-child(3) {
+  cursor: pointer;
+}
+body header .header_wrapper .container .navigation nav ul li a {
+  color: rgba(246, 246, 246, 0.8);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Firago", sans-serif;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language {
+  position: relative;
+  width: 56px;
+  height: 28px;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-button {
+  display: none;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-button:checked + .toggle-label::before {
+  transform: translateX(30px);
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-button:checked + .toggle-label .toggle-label-on {
+  display: block;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-button:not(:checked) + .toggle-label .toggle-label-off {
+  display: block;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #496ac1;
+  border-radius: 100px;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-on,
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-off {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-on {
+  left: -12px;
+  color: #496ac1;
+  font-size: 14px;
+}
+body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-off {
+  right: -12px;
+  color: #496ac1;
+  font-size: 14px;
 }/*# sourceMappingURL=global.css.map */
