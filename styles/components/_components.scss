@@ -83,6 +83,7 @@ body {
 
     .opportunities_section {
       margin-top: 80px;
+      margin-bottom: 368px;
 
       h3 {
         font-size: 28px;
@@ -105,6 +106,10 @@ body {
           border-radius: 20px;
           text-align: center;
           padding: 40px 40px 51px 40px;
+
+          img{
+            width: 100%;
+          }
 
           h4 {
             margin-top: 24px;

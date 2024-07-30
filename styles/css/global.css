@@ -160,6 +160,13 @@ button {
   font-weight: 350;
   font-size: normal;
 }
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff) format("woff");
+}
 body {
   font-family: "Firago", sans-serif;
 }
@@ -251,6 +258,48 @@ body header .header_wrapper .container .navigation nav ul .toggle-language .togg
   font-size: 14px;
 }
 
+footer {
+  background-color: #496AC1;
+  padding: 40px 0;
+}
+footer .footer-wrapper {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-wrapper .privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-wrapper .privacy a {
+  font-family: "FiraGo";
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+footer .footer-wrapper .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-wrapper .logo-wrapper a {
+  width: 100%;
+}
+footer .footer-wrapper .logo-wrapper a .unilab {
+  width: 87px;
+  height: 70px;
+  margin-right: 40px;
+}
+footer .footer-wrapper .logo-wrapper a .iliauni {
+  width: 72.7px;
+  height: 70px;
+}
+
 body {
   background-color: #f0f4f8;
 }
@@ -327,6 +376,7 @@ body main .section_1_content .buttons div:hover a {
 }
 body main .opportunities_section {
   margin-top: 80px;
+  margin-bottom: 368px;
 }
 body main .opportunities_section h3 {
   font-size: 28px;
@@ -350,6 +400,9 @@ body main .opportunities_section .blocks .block {
   border-radius: 20px;
   text-align: center;
   padding: 40px 40px 51px 40px;
+}
+body main .opportunities_section .blocks .block img {
+  width: 100%;
 }
 body main .opportunities_section .blocks .block h4 {
   margin-top: 24px;
