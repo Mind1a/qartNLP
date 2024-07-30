@@ -1,0 +1,160 @@
+body {
+  background-color: $body-bg-color;
+
+  main {
+    .container {
+      @include container;
+    }
+
+    .section_1_content {
+      @include flex(center, center);
+      flex-direction: column;
+      row-gap: 38px;
+      text-align: center;
+      background-image: url("../../assets/banner-image.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 531px;
+      margin-top: 80px;
+
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 57.6px;
+        color: $text-color;
+      }
+
+      p {
+        width: 81.27%;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $text-color;
+      }
+
+      .buttons {
+        display: flex;
+        column-gap: 30px;
+
+        div {
+          width: 159px;
+          height: 39px;
+          padding: 10px 30px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          a {
+            font-size: 16px;
+            font-weight: 350;
+            line-height: 19.2px;
+            transition: color 0.3s ease;
+          }
+
+          &:nth-child(1) {
+            background-color: $text-color;
+
+            a {
+              color: $button-text-color;
+            }
+          }
+
+          &:nth-child(2) {
+            border: 1px solid $text-color-02;
+            padding: 8px 30px;
+
+            a {
+              color: $text-color-02;
+            }
+          }
+
+          &:hover {
+            background-color: $header-bg-color;
+            border: none;
+
+            a {
+              color: $text-color-02;
+            }
+          }
+        }
+      }
+    }
+
+    .opportunities_section {
+      margin-top: 80px;
+
+      h3 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.6px;
+        color: $header-bg-color;
+        text-align: center;
+      }
+
+      .blocks {
+        margin-top: 38px;
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        .block {
+          width: 580px;
+          height: 610px;
+          background-color: $text-color-02;
+          border-radius: 20px;
+          text-align: center;
+          padding: 40px 40px 51px 40px;
+
+          h4 {
+            margin-top: 24px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $block-text-color;
+          }
+
+          p {
+            margin-top: 22px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: $block-text-color;
+          }
+
+          &:nth-child(7),
+          &:nth-child(8) {
+            width: 100%;
+            height: auto;
+            padding: 40px 40px 72px 40px;
+          }
+
+          .see_more {
+            border: 1px solid $header-bg-color;
+            padding: 10px 30px;
+            border-radius: 8px;
+            margin-top: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            a {
+              font-size: 16px;
+              font-weight: 350;
+              line-height: 19.2px;
+              color: $header-bg-color;
+              transition: color 0.3s ease;
+            }
+
+            &:hover {
+              background-color: $header-bg-color;
+
+              a {
+                color: $text-color-02;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
