@@ -506,15 +506,16 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   border-radius: 8px;
   outline: none;
   border: 1px solid #496ac1;
-  padding: 0 45px 0 20px;
+  padding: 0 55px 0 20px;
 }
 .authorization-wrapper .authorization-container .authorization-form form .input-wrapper .password-input {
   position: relative;
 }
 .authorization-wrapper .authorization-container .authorization-form form .input-wrapper .password-input img {
+  width: 16px;
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 30px;
   transform: translateY(-50%);
   cursor: pointer;
 }
