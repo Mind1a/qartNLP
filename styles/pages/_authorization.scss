@@ -66,16 +66,17 @@
             border-radius: 8px;
             outline: none;
             border: 1px solid $header-bg-color;
-            padding: 0 45px 0 20px;
+            padding: 0 55px 0 20px;
           }
 
           .password-input {
             position: relative;
 
             img {
+              width: 16px;
               position: absolute;
               top: 50%;
-              right: 20px;
+              right: 30px;
               transform: translateY(-50%);
               cursor: pointer;
             }

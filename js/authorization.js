@@ -29,6 +29,6 @@ togglePassword.addEventListener("click", () => {
     togglePassword.src = "../assets/hide-password.svg";
   } else {
     input.type = "password";
-    togglePassword.src = "../assets/hide-password.svg";
+    togglePassword.src = "../assets/show-password.svg";
   }
 });
