@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qartNLP</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="authorization-wrapper">
+        <div class="authorization-container">
+          <a href="../index.html" class="go-back-arrow">
+            <img src="../assets/arrow-left.svg" alt="arrow-left" />
+          </a>
+          <div class="authorization-form">
+            <h2>ავტორიზაცია</h2>
+            <form>
+              <div class="input-wrapper">
+                <label for="input 1">ელ.ფოსტა</label>
+                <input type="text" id="input1" name="input1" class="input" />
+                <p class="hidden">თქვენ მიერ მითითებული ელ.ფოსტა არასწორია</p>
+              </div>
+              <div class="input-wrapper">
+                <label for="input 2">პაროლი</label>
+                <div class="password-input">
+                  <input type="text" id="input2" name="input2" class="input" />
+                  <img
+                    src="../assets/hide-password.svg"
+                    alt="hide-password"
+                    class="toggle-password"
+                  />
+                </div>
+                <p class="hidden">თქვენ მიერ მითითებული პაროლი არასწორია</p>
+              </div>
+              <a href="#" class="forgot-password">დაგავიწყდათ პაროლი?</a>
+              <div class="authorization-div authorization-button">
+                <button>ავტორიზაცია</button>
+              </div>
+              <div class="authorization-div google-authorization">
+                <button>
+                  <img src="../assets/google-logo.svg" alt="facebook" />
+                  Sign in with Google
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="registration-container">
+          <div class="logo">
+            <a href="../index.html"
+              ><img src="../assets/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <a href="#" class="registration-button">რეგისტრაცია</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript link -->
+    <script src="../js/script.js"></script>
+    <script src="../js/authorization.js"></script>
+  </body>
+</html>

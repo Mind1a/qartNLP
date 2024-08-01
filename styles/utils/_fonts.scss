@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Firago";
+  src: url("../fonts/FiraGO/Roman/FiraGO-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Firago-350";
+  src: url(../fonts/FiraGO/Roman/FiraGO-Regular.otf) format("otf");
+  font-weight: 350;
+  font-size: normal;
+}
+
+
+@font-face {
+  font-family: 'FiraGO';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff) format('woff');
+}
