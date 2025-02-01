@@ -148,26 +148,7 @@ button {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Firago-400";
-  src: url("../fonts/FiraGO/Roman/FiraGO-Regular.otf") format("otf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Firago-350";
-  src: url(../fonts/FiraGO/Roman/FiraGO-Regular.otf) format("otf");
-  font-weight: 350;
-  font-size: normal;
-}
-@font-face {
-  font-family: "FiraGO";
-  font-style: normal;
-  font-display: swap;
-  font-weight: 600;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff) format("woff");
-}
-body {
+body header {
   font-family: "Firago", sans-serif;
 }
 body header .header_wrapper {
@@ -191,7 +172,7 @@ body header .header_wrapper .container .navigation nav ul {
 }
 body header .header_wrapper .container .navigation nav ul li a {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   font-family: "Firago", sans-serif;
@@ -262,6 +243,7 @@ body header .header_wrapper .container .navigation nav ul .toggle-language .togg
 footer {
   background-color: #496AC1;
   padding: 40px 50px;
+  font-family: "FiraGO", sans-serif;
 }
 footer .footer-wrapper {
   max-width: 1180px;
@@ -278,9 +260,8 @@ footer .footer-wrapper .privacy {
   gap: 20px;
 }
 footer .footer-wrapper .privacy a {
-  font-family: "FiraGo";
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
 }
 footer .footer-wrapper .logo-wrapper {
@@ -306,6 +287,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "FiraGO", sans-serif;
 }
 body main {
   flex: 1;
@@ -339,7 +321,8 @@ body main .section_1_content p {
   width: 81.27%;
   font-size: 20px;
   line-height: 24px;
-  color: #e6e6e6;
+  font-weight: 400;
+  color: #E6E6E6;
 }
 body main .section_1_content .buttons {
   display: flex;
@@ -356,7 +339,7 @@ body main .section_1_content .buttons div {
 }
 body main .section_1_content .buttons div a {
   font-size: 16px;
-  font-weight: 350;
+  font-weight: 400;
   line-height: 19.2px;
   transition: color 0.3s ease;
 }
@@ -424,7 +407,7 @@ body main .opportunities_section .blocks .block p {
   line-height: 19.2px;
   color: #000000;
 }
-body main .opportunities_section .blocks .block:nth-child(7), body main .opportunities_section .blocks .block:nth-child(8) {
+body main .opportunities_section .blocks .block:nth-child(7), body main .opportunities_section .blocks .block:nth-child(8), body main .opportunities_section .blocks .block:nth-child(9) {
   width: 100%;
   height: auto;
   padding: 40px 40px 72px 40px;
@@ -439,7 +422,7 @@ body main .opportunities_section .blocks .block .see_more {
 }
 body main .opportunities_section .blocks .block .see_more a {
   font-size: 16px;
-  font-weight: 350;
+  font-weight: 400;
   line-height: 19.2px;
   color: #496ac1;
   transition: color 0.3s ease;
