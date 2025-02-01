@@ -1,7 +1,12 @@
 body {
   background-color: $body-bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   main {
+    flex: 1;
+    
     .container {
       @include container;
     }
@@ -11,7 +16,7 @@ body {
       flex-direction: column;
       row-gap: 38px;
       text-align: center;
-      background-image: url("../../assets/banner-image.png");
+      background-image: url("../../assets/banner-image.webp");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -28,7 +33,6 @@ body {
       p {
         width: 81.27%;
         font-size: 20px;
-        font-weight: 400;
         line-height: 24px;
         color: $text-color;
       }
@@ -71,7 +75,7 @@ body {
 
           &:hover {
             background-color: $header-bg-color;
-            border: none;
+            border-color: $header-bg-color;
 
             a {
               color: $text-color-02;
