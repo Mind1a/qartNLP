@@ -149,9 +149,9 @@ button {
 }
 
 @font-face {
-  font-family: "Firago";
+  font-family: "Firago-400";
   src: url("../fonts/FiraGO/Roman/FiraGO-Regular.otf") format("otf");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -172,7 +172,7 @@ body {
 }
 body header .header_wrapper {
   background-color: #496ac1;
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 body header .header_wrapper .container {
   max-width: 1180px;
@@ -189,15 +189,16 @@ body header .header_wrapper .container .navigation nav ul {
   -moz-column-gap: 73px;
        column-gap: 73px;
 }
-body header .header_wrapper .container .navigation nav ul li:nth-child(3) {
-  cursor: pointer;
-}
 body header .header_wrapper .container .navigation nav ul li a {
-  color: rgba(246, 246, 246, 0.8);
+  color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   font-family: "Firago", sans-serif;
+  transition: 0.3s;
+}
+body header .header_wrapper .container .navigation nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.4392156863);
 }
 body header .header_wrapper .container .navigation nav ul .toggle-language {
   position: relative;
@@ -260,7 +261,7 @@ body header .header_wrapper .container .navigation nav ul .toggle-language .togg
 
 footer {
   background-color: #496AC1;
-  padding: 40px 0;
+  padding: 40px 50px;
 }
 footer .footer-wrapper {
   max-width: 1180px;
@@ -302,6 +303,12 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
 
 body {
   background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  flex: 1;
 }
 body main .container {
   max-width: 1180px;
@@ -315,7 +322,7 @@ body main .section_1_content {
   flex-direction: column;
   row-gap: 38px;
   text-align: center;
-  background-image: url("../../assets/banner-image.png");
+  background-image: url("../../assets/images/banner-image.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -331,7 +338,6 @@ body main .section_1_content h2 {
 body main .section_1_content p {
   width: 81.27%;
   font-size: 20px;
-  font-weight: 400;
   line-height: 24px;
   color: #e6e6e6;
 }
@@ -369,7 +375,7 @@ body main .section_1_content .buttons div:nth-child(2) a {
 }
 body main .section_1_content .buttons div:hover {
   background-color: #496ac1;
-  border: none;
+  border-color: #496ac1;
 }
 body main .section_1_content .buttons div:hover a {
   color: #ffffff;
