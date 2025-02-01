@@ -322,7 +322,7 @@ body main .section_1_content {
   flex-direction: column;
   row-gap: 38px;
   text-align: center;
-  background-image: url("../../assets/banner-image.webp");
+  background-image: url("../../assets/images/banner-image.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
