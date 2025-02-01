@@ -4,7 +4,7 @@ body {
   header {
     .header_wrapper {
       background-color: $header-bg-color;
-      padding: 20px 0;
+      padding: 20px 50px;
 
       .container {
         @include container;
@@ -17,16 +17,17 @@ body {
               column-gap: 73px;
 
               li {
-                &:nth-child(3) {
-                  cursor: pointer;
-                }
-
                 a {
-                  color: $nav-elements-color;
+                  color: #ffffff;
                   font-weight: 700;
                   font-size: 20px;
                   line-height: 24px;
                   font-family: "Firago", sans-serif;
+                  transition: 0.3s;
+
+                  &:hover{
+                    color: #ffffff70;
+                  }
                 }
               }
 
