@@ -17,6 +17,9 @@
         background-color: white;
         position: relative;
         overflow: hidden;
+        box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.1),
+    0px 130px 130px rgba(0, 0, 0, 0.09), 0px 292px 175px rgba(0, 0, 0, 0.05),
+    0px 519px 208px rgba(0, 0, 0, 0.01), 0px 811px 227px rgba(0, 0, 0, 0);  
 
         span{
             font-size: 16px;
@@ -143,9 +146,10 @@
                 .person{
                     display: flex;
                     gap: 22px;
-
-                    span{
-                        margin-bottom: 8px;
+                    
+                    div{
+                        display: flex;
+                        flex-direction: column;
                     }
                 }
                 .password{
@@ -156,23 +160,6 @@
                         top: 12px;
                         right: 12px;
                         cursor: pointer;
-                    }
-                    .agreement{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 8px;
-
-                        .box{
-                            width: 20px;
-                            height: 20px; 
-                        }
-
-                        .agree{
-                            font-size: 14px;
-                            color: #496AC1;
-                            line-height: 16.8px;
-                        }
                     }
                 }
             }
@@ -282,5 +269,25 @@
     }
     .toggle img{
         width: 235px;
+    }
+
+    .container{
+        .form-container{
+            .agreement{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 20px;
+
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+                .agree{
+                    font-size: 14px;
+                    color: #496AC1;
+                }
+            }
+        }
     }
 }
