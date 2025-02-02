@@ -551,4 +551,348 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   font-size: 16px;
   line-height: 19.2px;
   font-weight: 500;
+}
+
+.body {
+  background-color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body .container {
+  width: 1180px;
+  max-width: 1180px;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.body .container span {
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+.body .container .cancel, .body .container .cancel-white {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  z-index: 99999;
+  cursor: pointer;
+}
+.body .container .cancel {
+  display: none;
+}
+.body .container .cancel-white {
+  display: block;
+}
+.body .container .cancel.active {
+  display: block;
+}
+.body .container .cancel-white.active {
+  display: none;
+}
+.body .container .sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.body .container .sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.body .container .form-container {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.body .container .form-container form {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 340px;
+  max-width: 340px;
+}
+.body .container .form-container form .error-text {
+  color: red;
+}
+.body .container .form-container form .error {
+  border: 1px solid red;
+}
+.body .container .form-container form input {
+  border: 1px solid #496AC1;
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+.body .container .form-container form input:hover {
+  border: 1px solid #2c2c2c;
+}
+.body .container .form-container form input:focus {
+  border: 1px solid #2c2c2c;
+}
+.body .container .form-container form a {
+  text-decoration: none;
+}
+.body .container .form-container form h1 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 700;
+  color: #496AC1;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.body .container .form-container form .forget a {
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #496AC1;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.body .container .form-container form button {
+  width: 340px;
+  height: 40px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #496AC1;
+  color: white;
+  border: none;
+  font-size: 16px;
+  line-height: 19.2px;
+  cursor: pointer;
+}
+.body .container .form-container form .box {
+  cursor: pointer;
+}
+.body .container .form-container form .google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid #496AC1;
+  color: black;
+}
+.body .container .form-container form .person {
+  display: flex;
+  gap: 22px;
+}
+.body .container .form-container form .person span {
+  margin-bottom: 8px;
+}
+.body .container .form-container form .password {
+  position: relative;
+}
+.body .container .form-container form .password img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.body .container .form-container form .password .agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.body .container .form-container form .password .agreement .box {
+  width: 20px;
+  height: 20px;
+}
+.body .container .form-container form .password .agreement .agree {
+  font-size: 14px;
+  color: #496AC1;
+  line-height: 16.8px;
+}
+.body .container.active .sign-in {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 0;
+}
+.body .container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.body .toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+}
+.body .container.active .toggle-container {
+  transform: translateX(-100%);
+}
+.body .toggle {
+  height: 100%;
+  background-color: #496AC1;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.body .container.active .toggle {
+  transform: translateX(50%);
+}
+.body .toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.body .toggle-left {
+  transform: translateX(-200%);
+}
+.body .container.active .toggle-left {
+  transform: translateX(0);
+}
+.body .toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+.body .toggle-right button {
+  margin-bottom: 20px;
+}
+.body .container.active .toggle-right {
+  transform: translateX(200%);
+}
+.body .toggle-panel img {
+  margin-bottom: 32px;
+}
+.body .toggle button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 19.2px;
+  width: 235px;
+  cursor: pointer;
+}
+.body .toggle img {
+  width: 235px;
+}
+
+body .main-sucess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .main-sucess div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main-sucess div p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+body .main-sucess div button {
+  max-width: 340px;
+  width: 340px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #496AC1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  border: none;
+  border-radius: 6px;
+}
+body .main-sucess div button a {
+  color: white;
+  padding: 10.5px 115.5px;
+}
+
+.main-emailCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-emailCheck .main-container {
+  display: flex;
+  align-items: center;
+  gap: 425px;
+}
+.main-emailCheck .main-container .left-content h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.4px;
+  margin-bottom: 24px;
+}
+.main-emailCheck .main-container .left-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  margin-bottom: 16px;
+}
+.main-emailCheck .main-container .left-content .email {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  margin-bottom: 40px;
+}
+.main-emailCheck .main-container .left-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: #496AC1;
+}
+.main-emailCheck .main-container .left-content button a {
+  color: white;
+  padding: 10.5px 94px;
 }/*# sourceMappingURL=global.css.map */

@@ -1,34 +1,63 @@
-const authorizationInputs = document.querySelectorAll(".input");
-const authorizationButton = document.querySelector(".authorization-button");
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-authorizationButton.addEventListener("click", (e) => {
-  let allFilled = true;
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
 
-  authorizationInputs.forEach((input) => {
-    if (input.value.trim() === "") {
-      const inputWrapper = input.closest(".input-wrapper");
-      const error = inputWrapper.querySelector("p");
-      error.style.visibility = "visible";
-      allFilled = false;
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
+function showPassword(icon){
+    let passwordField = icon.previousElementSibling;
+    passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
+
+function success(){
+    let box = document.getElementById("box")
+    let successBox = document.getElementById("success-box")
+
+    if(box.style.display === "none") {
+        box.style.display = "block";
+        successBox.style.display = "none";
+    } else {
+        box.style.display = "none";
+        successBox.style.display = "block";
     }
-  });
+}
 
-  if (allFilled) {
-    window.location.href = "#";
-  } else {
-    e.preventDefault();
-  }
-});
+function forgetPassword(){
+    let forgetPassword = document.getElementById("forget-password");
+    let active = document.getElementById("sign-in");
+    let register = document.getElementById("authoritation")
 
-const togglePassword = document.querySelector(".toggle-password");
-togglePassword.addEventListener("click", () => {
-  const input = togglePassword.previousElementSibling;
+    forgetPassword.style.display = "block";
+    active.style.display = "none";
+    register.style.display = "block";
+}
 
-  if (input.type === "password") {
-    input.type = "text";
-    togglePassword.src = "../assets/hide-password.svg";
-  } else {
-    input.type = "password";
-    togglePassword.src = "../assets/show-password.svg";
-  }
-});
+function showAuthorization(){
+    let forgetPassword = document.getElementById("forget-password");
+    let active = document.getElementById("sign-in");
+    let register = document.getElementById("authoritation")
+    let resolve = document.getElementById("resolve-password")
+
+    forgetPassword.style.display = "none";
+    active.style.display = "flex";
+    register.style.display = "none";
+    resolve.style.display = "none";
+}
+
+function resolvePassword(){
+    let forgetPassword = document.getElementById("forget-password");
+    let active = document.getElementById("sign-in");
+    let register = document.getElementById("authoritation")
+    let resolve = document.getElementById("resolve-password")
+
+    forgetPassword.style.display = "none";
+    active.style.display = "none";
+    register.style.display = "none";
+    resolve.style.display = "flex";
+}

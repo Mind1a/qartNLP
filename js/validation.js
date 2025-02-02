@@ -1,0 +1,16 @@
+const authorizationForm = document.getElementById("authorization-form")
+const registerForm = document.getElementById("register-form")
+const forgetPasswordForm = document.getElementById("forgetpassword-form")
+const resetPasswordForm = document.getElementById("resetpassword-form")
+
+
+const email_input = document.getElementById("email-input")
+const email_label = document.getElementById("email-label")
+const password_input = document.getElementById("password-input")
+const password_label = document.getElementById("password-label")
+const reset_password_input = document.getElementById("reset-password-input")
+const reset_password_label = document.getElementById("reset-password-label")
+const name_input = document.getElementById("name-input")
+const name_label = document.getElementById("name-label")
+const surname_input = document.getElementById("surname-input")
+const surname_label = document.getElementById("surname-label")
