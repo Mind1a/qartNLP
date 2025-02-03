@@ -4,15 +4,40 @@ const loginBtn = document.getElementById('login');
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
+    toggleX();
 });
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
+    toggleX();
 });
+
+function toggleX() {
+    let whiteX = document.getElementById("white-X");
+    let blueX = document.getElementById("blue-X");
+
+    if (container.classList.contains("active")) {
+        whiteX.style.display = "none";
+        blueX.style.display = "block";
+    } else {
+        whiteX.style.display = "block";
+        blueX.style.display = "none";
+    }
+}
 
 function showPassword(icon){
     let passwordField = icon.previousElementSibling;
     passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
+
+function goBack(){
+    let authoritation = document.getElementById("sign-in")
+    let forgetPassword = document.getElementById("forget-password")
+    let authoritationBtn = document.getElementById("authoritation")
+
+    forgetPassword.style.display = "none";
+    authoritation.style.display = "flex";
+    authoritationBtn.style.display = "none";
 }
 
 function success(){
@@ -28,7 +53,7 @@ function success(){
     }
 }
 
-function forgetPassword(){
+function forgetPassword(formId){
     let forgetPassword = document.getElementById("forget-password");
     let active = document.getElementById("sign-in");
     let register = document.getElementById("authoritation")
@@ -36,9 +61,13 @@ function forgetPassword(){
     forgetPassword.style.display = "block";
     active.style.display = "none";
     register.style.display = "block";
+
+    document.querySelectorAll(".form-container").forEach(form => {
+        form.querySelectorAll("input").forEach(input => input.value = "")
+    })
 }
 
-function showAuthorization(){
+function showAuthorization(formId){
     let forgetPassword = document.getElementById("forget-password");
     let active = document.getElementById("sign-in");
     let register = document.getElementById("authoritation")
@@ -48,6 +77,16 @@ function showAuthorization(){
     active.style.display = "flex";
     register.style.display = "none";
     resolve.style.display = "none";
+
+    document.querySelectorAll(".form-container").forEach(form => {
+        form.querySelectorAll("input").forEach(input => input.value = "")
+        
+        let box = document.getElementById("box")
+        let successBox = document.getElementById("success-box")
+
+        box.style.display = "block"
+        successBox.style.display = "none"
+    })
 }
 
 function resolvePassword(){

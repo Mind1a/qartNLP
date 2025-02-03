@@ -8,8 +8,8 @@
 </head>
 <body class="body">
     <div class="container" id="container">
-        <a href="../index.html"><img src="../assets/authorization/cancel.png" class="cancel"></a>
-        <a href="../index.html"><img src="../assets/authorization/cancel-white.png" class="cancel-white"></a>
+        <a href="../index.html"><img src="../assets/authorization/cancel.png" class="cancel" id="blue-X"></a>
+        <a href="../index.html"><img src="../assets/authorization/cancel-white.png" class="cancel-white" id="white-X"></a>
         <div class="form-container sign-in" id="sign-in">
             <form id="authorization-form">
                 <h1>ავტორიზაცია</h1>
@@ -27,6 +27,7 @@
         </div>
 
         <section class="forget-password" id="forget-password" style="display: none;">
+            <img src="../assets/authorization/back.png" alt="გადადით უკან" id="back" onclick="goBack()" style="display: none;">
             <div class="form-container sign-in">
                 <form id="forgetpassword-form">
                     <h1>დაგავიწყდა პაროლი?</h1>
