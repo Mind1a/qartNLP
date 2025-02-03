@@ -660,6 +660,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form a {
   text-decoration: none;
+  color: white;
 }
 .body .container .form-container form h1 {
   font-size: 24px;
@@ -687,6 +688,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   font-size: 16px;
   line-height: 19.2px;
   cursor: pointer;
+}
+.body .container .form-container form .register-btn a {
+  padding: 10.5px 115.5px;
 }
 .body .container .form-container form .box {
   cursor: pointer;

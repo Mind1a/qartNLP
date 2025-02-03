@@ -100,3 +100,4 @@ function resolvePassword(){
     register.style.display = "none";
     resolve.style.display = "flex";
 }
+

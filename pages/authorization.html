@@ -33,7 +33,7 @@
                     <h1>დაგავიწყდა პაროლი?</h1>
                     <span id="email-label">ელ.პოსტა</span>
                     <input type="email" id="email-input">
-                    <button type="submit" onclick="resolvePassword()"><a href="#resolve-password" style="color: white;">პაროლის აღდგენა</a></button>
+                    <button type="submit" onclick="resolvePassword()"><a href="#resolve-password" style="color: white;" id="reset-link">პაროლის აღდგენა</a></button>
                 </form>
             </div>
         </section>
@@ -87,7 +87,7 @@
                     <img src="../assets/authorization/box.png" class="box" id="box" onclick="success()">
                     <span class="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</span>
                 </div>
-                <button type="submit">რეგისტრაცია</button>
+                <button type="submit" class="register-btn"><a href="./sucessPage.html">რეგისტრაცია</a></button>
                 <button class="google"><img src="../assets/authorization/google.png">Sign in with Google</button>
             </form>
         </div>
