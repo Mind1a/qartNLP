@@ -148,6 +148,186 @@ button {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-UltraLightItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-UltraLightItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-HairItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-HairItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-ThinItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-ExtraLightItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-TwoItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-TwoItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-LightItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-BookItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-FourItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-FourItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-Italic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-MediumItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-SemiBoldItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-BoldItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-EightItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-EightItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-ExtraBoldItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Italic/FiraGO-HeavyItalic.woff") format("woff"), url("../../assets/Fonts/Italic/FiraGO-HeavyItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Bold.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Book.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Eight.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Eight.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-ExtraBold.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-ExtraLight.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Four.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Four.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Hair.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Hair.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Heavy.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Light.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Medium.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Regular.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-SemiBold.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Thin.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-Two.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-Two.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraGO";
+  src: url("../../assets/Fonts/Roman/FiraGO-UltraLight.woff") format("woff"), url("../../assets/Fonts/Roman/FiraGO-UltraLight.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
 body header {
   font-family: "Firago", sans-serif;
 }
@@ -434,125 +614,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   color: #ffffff;
 }
 
-.authorization-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 1180px;
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.1), 0px 130px 130px rgba(0, 0, 0, 0.09), 0px 292px 175px rgba(0, 0, 0, 0.05), 0px 519px 208px rgba(0, 0, 0, 0.01), 0px 811px 227px rgba(0, 0, 0, 0);
-}
-.authorization-wrapper .registration-container,
-.authorization-wrapper .authorization-container {
-  width: 100%;
-  max-width: 590px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.authorization-wrapper .authorization-container {
-  position: relative;
-}
-.authorization-wrapper .authorization-container .go-back-arrow {
-  position: absolute;
-  top: 54px;
-  left: 40px;
-  cursor: pointer;
-}
-.authorization-wrapper .authorization-container .authorization-form h2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.8px;
-  margin-bottom: 40px;
-  color: #496ac1;
-  text-align: center;
-}
-.authorization-wrapper .authorization-container .authorization-form form {
-  font-family: "Firago-350";
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper {
-  margin-bottom: 20px;
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper label {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 19.2px;
-  margin-bottom: 8px;
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper p {
-  color: red;
-  font-size: 14px;
-  margin: 8px 0 0 0;
-  visibility: hidden;
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper input {
-  width: 100%;
-  height: 40px;
-  border-radius: 8px;
-  outline: none;
-  border: 1px solid #496ac1;
-  padding: 0 55px 0 20px;
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper .password-input {
-  position: relative;
-}
-.authorization-wrapper .authorization-container .authorization-form form .input-wrapper .password-input img {
-  width: 16px;
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.authorization-wrapper .authorization-container .authorization-form form .forgot-password {
-  color: #496ac1;
-}
-.authorization-wrapper .authorization-container .authorization-form form .authorization-div {
-  margin-top: 20px;
-}
-.authorization-wrapper .authorization-container .authorization-form form .authorization-div button {
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  line-height: 19.2px;
-  background-color: #496ac1;
-  color: white;
-}
-.authorization-wrapper .authorization-container .authorization-form form .google-authorization button {
-  color: #2c2c2c;
-  background-color: transparent;
-  border: 1px solid #496ac1;
-}
-.authorization-wrapper .authorization-container .authorization-form form .google-authorization button img {
-  margin-right: 10px;
-}
-.authorization-wrapper .registration-container {
-  background-color: #496ac1;
-}
-.authorization-wrapper .registration-container .registration-button {
-  width: 235px;
-  height: 40px;
-  padding: 10px;
-  margin-top: 32px;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
-  color: white;
-  background-color: transparent;
-  text-align: center;
-  font-size: 16px;
-  line-height: 19.2px;
-  font-weight: 500;
-}
-
 .body {
   background-color: #f0f4f8;
   display: flex;
@@ -569,7 +630,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   width: 1180px;
   max-width: 1180px;
   height: 100vh;
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.1), 0px 130px 130px rgba(0, 0, 0, 0.09), 0px 292px 175px rgba(0, 0, 0, 0.05), 0px 519px 208px rgba(0, 0, 0, 0.01), 0px 811px 227px rgba(0, 0, 0, 0);
@@ -626,9 +687,11 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
+.body .container .form-container button {
+  font-family: "FiraGO", sans-serif;
+}
 .body .container .form-container form {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   height: 100%;
@@ -636,14 +699,14 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   max-width: 340px;
 }
 .body .container .form-container form .error-text {
-  color: red;
+  color: #E73B37;
 }
 .body .container .form-container form .error {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #E73B37;
+  color: #E73B37;
 }
 .body .container .form-container form input {
-  border: 1px solid #496AC1;
+  border: 1px solid #496ac1;
   width: 100%;
   height: 40px;
   border-radius: 6px;
@@ -660,21 +723,23 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
-.body .container .form-container form h1 {
+.body .container .form-container form h2 {
   font-size: 24px;
   line-height: 28.8px;
   font-weight: 700;
-  color: #496AC1;
+  color: #496ac1;
   margin-bottom: 40px;
   text-align: center;
+}
+.body .container .form-container form .forget {
+  margin-bottom: 20px;
 }
 .body .container .form-container form .forget a {
   font-size: 14px;
   line-height: 16.8px;
-  color: #496AC1;
-  margin-bottom: 20px;
+  color: #496ac1;
   cursor: pointer;
 }
 .body .container .form-container form button {
@@ -682,8 +747,8 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   height: 40px;
   border-radius: 6px;
   margin-bottom: 20px;
-  background-color: #496AC1;
-  color: white;
+  background-color: #496ac1;
+  color: #ffffff;
   border: none;
   font-size: 16px;
   line-height: 19.2px;
@@ -695,14 +760,20 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 .body .container .form-container form .box {
   cursor: pointer;
 }
+.body .container .form-container form .success-box {
+  display: none;
+}
+.body .container .form-container form .visible {
+  display: block;
+}
 .body .container .form-container form .google {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   background: transparent;
-  border: 1px solid #496AC1;
-  color: black;
+  border: 1px solid #496ac1;
+  color: #000000;
 }
 .body .container .form-container form .person {
   display: flex;
@@ -757,8 +828,8 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .toggle {
   height: 100%;
-  background-color: #496AC1;
-  color: #fff;
+  background-color: #496ac1;
+  color: #ffffff;
   position: relative;
   left: -100%;
   height: 100%;
@@ -783,6 +854,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   transform: translateX(0);
   transition: all 0.6s ease-in-out;
 }
+.body .toggle-panel button {
+  font-family: "FiraGO", sans-serif;
+}
 .body .toggle-left {
   transform: translateX(-200%);
 }
@@ -800,12 +874,12 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   transform: translateX(200%);
 }
 .body .toggle-panel img {
-  margin-bottom: 32px;
+  margin-bottom: 53.49px;
 }
 .body .toggle button {
   background-color: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   height: 40px;
   border-radius: 6px;
   font-size: 16px;
@@ -828,7 +902,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container .agreement .agree {
   font-size: 14px;
-  color: #496AC1;
+  color: #496ac1;
 }
 
 body .main-sucess {

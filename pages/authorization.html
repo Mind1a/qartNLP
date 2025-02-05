@@ -11,37 +11,37 @@
         <a href="../index.html"><img src="../assets/authorization/cancel.png" class="cancel" id="blue-X"></a>
         <a href="../index.html"><img src="../assets/authorization/cancel-white.png" class="cancel-white" id="white-X"></a>
         <div class="form-container sign-in" id="sign-in">
-            <form id="authorization-form">
-                <h1>ავტორიზაცია</h1>
-                <span id="email-label">ელ.პოსტა</span>
+            <form id="authorization-form" novalidate>
+                <h2>ავტორიზაცია</h2>
+                <span id="email-label">ელ.ფოსტა</span>
                 <input type="email" id="email-input">
                 <span id="password-label">პაროლი</span>
                 <div class="password" id="password-input">
                     <input type="password" id="password-input">
                     <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
                 </div>
-                <span class="forget" onclick="forgetPassword()"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
+                <span class="forget" id="forget"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
                 <button type="submit">ავტორიზაცია</button>
                 <button class="google"><img src="../assets/authorization/google.png">Sign in with Google</button>
             </form>
         </div>
 
         <section class="forget-password" id="forget-password" style="display: none;">
-            <img src="../assets/authorization/back.png" alt="გადადით უკან" id="back" onclick="goBack()" style="display: none;">
+            <img src="../assets/authorization/back.png" alt="გადადით უკან" id="back" style="display: none;">
             <div class="form-container sign-in">
-                <form id="forgetpassword-form">
-                    <h1>დაგავიწყდა პაროლი?</h1>
-                    <span id="email-label">ელ.პოსტა</span>
+                <form id="forgetpassword-form" novalidate>
+                    <h2>დაგავიწყდა პაროლი?</h2>
+                    <span id="email-label">ელ.ფოსტა</span>
                     <input type="email" id="email-input">
-                    <button type="submit" onclick="resolvePassword()"><a href="#resolve-password" style="color: white;" id="reset-link">პაროლის აღდგენა</a></button>
+                    <button type="submit" id="check">პაროლის აღდგენა</button>
                 </form>
             </div>
         </section>
 
         <section class="resolve-password" id="resolve-password" style="display: none;">
             <div class="form-container sign-in">
-                <form id="resetpassword-form">
-                    <h1>პაროლის აღდგენა</h1>
+                <form id="resetpassword-form" novalidate>
+                    <h2>პაროლის აღდგენა</h2>
                     <span id="password-label">ახალი პაროლი</span>
                     <div class="password">
                         <input type="password" id="password-input">
@@ -52,14 +52,14 @@
                         <input type="password" id="reset-password-input">
                         <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
                     </div>
-                    <button type="submit">შენახვა</button>
+                    <button type="submit" id="save">შენახვა</button>
                 </form>
             </div>
         </section>
 
         <div class="form-container sign-up">
-            <form id="registerForm">
-                <h1>რეგისტრაცია</h1>
+            <form id="registerForm" novalidate>
+                <h2>რეგისტრაცია</h2>
                 <div class="person">
                     <div>
                         <span id="name-label">სახელი</span>
@@ -70,7 +70,7 @@
                         <input type="text" id="surname-input">
                     </div>
                 </div>
-                <span id="email-label">ელ.პოსტა</span>
+                <span id="email-label">ელ.ფოსტა</span>
                 <input type="email" id="email-input">
                 <span id="password-label">პაროლი</span>
                 <div class="password">
@@ -83,11 +83,11 @@
                     <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
                 </div>
                 <div class="agreement">
-                    <img src="../assets/authorization/success-one.png" style="display: none;" class="success-box box" id="success-box" onclick="success()">
-                    <img src="../assets/authorization/box.png" class="box" id="box" onclick="success()">
-                    <span class="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</span>
+                    <img src="../assets/authorization/success-one.png" style="display: none;" class="success-box box" id="success-box">
+                    <img src="../assets/authorization/box.png" class="box" id="box">
+                    <a href="#" class="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</a>
                 </div>
-                <button type="submit" class="register-btn"><a href="./sucessPage.html">რეგისტრაცია</a></button>
+                <button type="submit" class="register-btn" id="register-btn">რეგისტრაცია</button>
                 <button class="google"><img src="../assets/authorization/google.png">Sign in with Google</button>
             </form>
         </div>
@@ -95,11 +95,11 @@
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <img src="../assets/authorization/logo.png">
+                    <img src="../assets/svg/logo.svg">
                     <button class="toggle-btn" id="login" onclick="showAuthorization()">ავტორიზაცია</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <img src="../assets/authorization/logo.png">
+                    <img src="../assets/svg/logo.svg">
                     <button class="toggle-btn" id="authoritation" style="display: none;" onclick="showAuthorization()">ავტორიზაცია</button>
                     <button class="toggle-btn" id="register">რეგისტრაცია</button>
                 </div>

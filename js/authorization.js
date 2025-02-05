@@ -30,28 +30,61 @@ function showPassword(icon){
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
 
-function goBack(){
-    let authoritation = document.getElementById("sign-in")
-    let forgetPassword = document.getElementById("forget-password")
-    let authoritationBtn = document.getElementById("authoritation")
 
-    forgetPassword.style.display = "none";
-    authoritation.style.display = "flex";
-    authoritationBtn.style.display = "none";
-}
+// go back function
+// function goBack(){
+//     let authoritation = document.getElementById("sign-in")
+//     let forgetPassword = document.getElementById("forget-password")
+//     let authoritationBtn = document.getElementById("authoritation")
 
-function success(){
-    let box = document.getElementById("box")
-    let successBox = document.getElementById("success-box")
+//     forgetPassword.style.display = "none";
+//     authoritation.style.display = "flex";
+//     authoritationBtn.style.display = "none";
+// }
 
-    if(box.style.display === "none") {
-        box.style.display = "block";
-        successBox.style.display = "none";
-    } else {
-        box.style.display = "none";
-        successBox.style.display = "block";
-    }
-}
+
+let box = document.getElementById("box");
+    let successBox = document.getElementById("success-box");
+
+    box.addEventListener("click", function () {
+        if (box.style.display === "none") {
+            box.style.display = "block";
+            successBox.style.display = "none";
+        } else {
+            box.style.display = "none";
+            successBox.style.display = "block";
+        }
+    });
+
+    successBox.addEventListener("click", function () {
+        if (box.style.display === "none") {
+            box.style.display = "block";
+            successBox.style.display = "none";
+        } else {
+            box.style.display = "none";
+            successBox.style.display = "block";
+        }
+    });
+
+// function success(){
+//     let box = document.getElementById("box")
+//     let successBox = document.getElementById("success-box")
+
+//     if(box.style.display === "none") {
+//         box.style.display = "block";
+//         successBox.style.display = "none";
+//     } else {
+//         box.style.display = "none";
+//         successBox.style.display = "block";
+//     }
+// }
+
+// const forget = document.getElementById("forget").addEventListener("click", forgetPassword())
+
+const forget = document.getElementById("forget")
+forget.addEventListener("click", () => {
+    forgetPassword();
+})
 
 function forgetPassword(formId){
     let forgetPassword = document.getElementById("forget-password");
@@ -66,6 +99,11 @@ function forgetPassword(formId){
         form.querySelectorAll("input").forEach(input => input.value = "")
     })
 }
+
+const authoritation = document.getElementById("authoritation")
+
+loginBtn.addEventListener("click", showAuthorization());
+authoritation.addEventListener("click", showAuthorization());
 
 function showAuthorization(formId){
     let forgetPassword = document.getElementById("forget-password");
@@ -101,3 +139,21 @@ function resolvePassword(){
     resolve.style.display = "flex";
 }
 
+const check = document.getElementById("check")
+check.addEventListener("click", () => {
+    checkInput();
+})
+
+function checkInput(){
+        window.location.href = "#resolve-password";
+        resolvePassword();
+}
+
+const register = document.getElementById("register-btn")
+console.log(register)
+register.addEventListener("click", function () {
+    window.location.href = "./sucessPage.html";
+});
+
+
+// document.querySelectorAll("form").forEach(form => form.setAttribute("novalidate", "true"));
