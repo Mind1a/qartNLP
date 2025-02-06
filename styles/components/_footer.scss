@@ -1,6 +1,7 @@
 footer{
     background-color: #496AC1;
     padding: 40px 50px;
+    font-family: 'FiraGO', sans-serif;
 
     .footer-wrapper{
         @include container();
@@ -15,9 +16,8 @@ footer{
             gap: 20px;
 
             a{
-                font-family: 'FiraGo';
                 font-size: 18px;
-                font-weight: 600;
+                font-weight: 500;
                 color: #fff;
             }
         }
