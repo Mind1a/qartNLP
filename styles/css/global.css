@@ -516,9 +516,7 @@ body main .section_1_content .buttons {
        column-gap: 30px;
 }
 body main .section_1_content .buttons div {
-  width: 159px;
-  height: 39px;
-  padding: 10px 30px;
+  padding: 10px 23px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
