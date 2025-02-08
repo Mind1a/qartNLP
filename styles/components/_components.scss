@@ -18,11 +18,13 @@ body {
       row-gap: 38px;
       text-align: center;
       background-image: url("../../assets/images/banner-image.webp");
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       height: 531px;
       margin-top: 80px;
+      max-width: 1180px;
+      max-width: 91%;
 
       h2 {
         font-size: 48px;
@@ -32,7 +34,7 @@ body {
       }
 
       p {
-        width: 81.27%;
+        max-width: 90ch;
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
@@ -44,9 +46,7 @@ body {
         column-gap: 30px;
 
         div {
-          width: 159px;
-          height: 39px;
-          padding: 10px 30px;
+          padding: 10px 23px;
           border-radius: 8px;
           cursor: pointer;
           transition: background-color 0.3s ease;
@@ -54,7 +54,7 @@ body {
           a {
             font-size: 16px;
             font-weight: 400;
-            line-height: 19.2px;
+            line-height: 21.76px;
             transition: color 0.3s ease;
           }
 
@@ -111,14 +111,13 @@ body {
           background-color: $text-color-02;
           border-radius: 20px;
           text-align: center;
-          padding: 40px 40px 51px 40px;
 
           img{
             width: 100%;
+            padding: 40px 40px 24px;
           }
 
           h4 {
-            margin-top: 24px;
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -126,16 +125,17 @@ body {
           }
 
           p {
-            margin-top: 22px;
             font-size: 16px;
             font-weight: 400;
             line-height: 19.2px;
             color: $block-text-color;
+            max-width: 50ch;
+            margin: 22px auto 17px;
           }
 
-          &:nth-child(7),
-          &:nth-child(8),
-          &:nth-child(9) {
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7) {
             width: 100%;
             height: auto;
             padding: 40px 40px 72px 40px;
@@ -144,7 +144,7 @@ body {
           .see_more {
             border: 1px solid $header-bg-color;
             padding: 10px 30px;
-            border-radius: 8px;
+            border-radius: 8px; 
             margin-top: 24px;
             cursor: pointer;
             transition: background-color 0.3s ease;
