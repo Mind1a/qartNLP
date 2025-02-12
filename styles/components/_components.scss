@@ -7,10 +7,11 @@ body {
 
   main {
     flex: 1;
+    @include container;
     
-    .container {
-      @include container;
-    }
+    // .container {
+    //   @include container;
+    // }
 
     .section_1_content {
       @include flex(center, center);
@@ -23,8 +24,8 @@ body {
       background-position: center;
       height: 531px;
       margin-top: 80px;
-      max-width: 1180px;
-      max-width: 91%;
+      // max-width: 1180px;
+      // max-width: 91%;
 
       h2 {
         font-size: 48px;
