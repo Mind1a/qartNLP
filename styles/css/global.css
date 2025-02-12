@@ -990,4 +990,84 @@ body .main-sucess div button a {
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
+}
+
+body {
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  flex: 1;
+}
+body main .hero-section {
+  padding: 80px 0 150px;
+}
+body main .hero-section h1 {
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #496ac1;
+  margin-bottom: 38px;
+  letter-spacing: 0.75px;
+}
+body main .hero-section p {
+  font-family: "FiraGO", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.2;
+}
+body main .hero-section span {
+  padding-bottom: 20px;
+}
+
+.label-box {
+  display: flex;
+  flex-direction: column;
+}
+.label-box label {
+  font-family: "FiraGO", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #496ac1;
+  letter-spacing: 0.75px;
+}
+.label-box span {
+  align-self: flex-end;
+  text-align: end;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.form-container textarea {
+  width: 1180px;
+  height: 400PX;
+  border: 1px solid #496ac1;
+  resize: none;
+  padding: 30px 0 0 30px;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-container input {
+  outline: none;
+  padding: 15px 50px;
+  border: 1px solid #496ac1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 16p;
+  font-weight: 500;
+  color: #496ac1;
+}
+.btn-container :nth-child(2) {
+  background-color: #496ac1;
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */

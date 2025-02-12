@@ -1,0 +1,43 @@
+body{
+
+  background-color: $body-bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //font-family: 'FiraGO', sans-serif;
+
+    main{
+        flex:1;
+        .hero-section {
+            padding:80px 0 150px;
+            
+        
+            h1{
+            font-family: 'FiraGO', sans-serif;
+            font-size:24px;
+            font-weight:700;
+            color:$header-bg-color;
+            margin-bottom:38px;
+            letter-spacing: 0.75px;
+
+            }
+            p {
+                font-family: 'FiraGO', sans-serif;
+                font-size:18px;
+               font-weight:400;
+               color: $button-text-color;
+               margin-bottom:20px;
+               text-align: justify;
+               line-height: 1.2;
+                
+            }
+            span{
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+
+
+}
+

@@ -1,0 +1,59 @@
+.label-box{
+    display:flex;
+    flex-direction: column;
+
+    label{
+        font-family: 'FiraGO', sans-serif;
+        font-size:28px;
+        font-weight:600;
+        color:$header-bg-color;
+        letter-spacing: 0.75px;
+    
+    }
+
+    span{
+        align-self: flex-end;
+        text-align: end;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+}
+
+
+.form-container {
+    
+
+    textarea{
+        width:1180px;
+        height:400PX;
+        border: 1px solid $header-bg-color;
+        resize:none;
+
+
+        padding:30px 0 0 30px;
+        font-size:16px;
+        color:$button-text-color;
+    }
+}
+
+.btn-container{
+    display:flex;
+    justify-content: space-between;
+    input {
+        outline: none;
+        padding:15px 50px;
+        border: 1px solid $header-bg-color;
+        border-radius: 6px;
+        background-color: $white;
+
+        font-size: 16p;
+        font-weight: 500;
+        color:$header-bg-color;
+
+    }
+    :nth-child(2) {
+        background-color: $header-bg-color;
+        color:$white;
+
+    }
+}
