@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../styles/css/global.css">
-    </head>
-    <body>
-        <header>
-            <div class="header_wrapper">
-              <div class="container">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/global.css">
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="container">
                 <!-- logo -->
-                <div class="logo">
-                  <a href="../index.html"
-                    ><img src="../assets/svg/logo.svg" alt="logo"
+          <div class="logo">
+              <a href="../index.html"
+                ><img src="../assets/svg/logo.svg" alt="logo"
                   /></a>
-                </div>
+          </div>
       
-                <!-- navigation -->
-                <div class="navigation">
-                  <nav>
-                    <ul>
-                      <li><a href="#">ჩვენ შესახებ</a></li>
-                      <li><a href="./authorization.html">ავტორიზაცია</a></li>
+          <!-- navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="#">ჩვენ შესახებ</a></li>
+                <li><a href="./authorization.html">ავტორიზაცია</a></li>
       
-                      <!-- Toggle language button -->
-                      <div class="toggle-language">
-                        <input
-                          type="checkbox"
-                          id="toggle-button"
-                          class="toggle-button"
-                          checked
-                        />
-                        <label for="toggle-button" class="toggle-label">
-                          <span class="toggle-label-on">GE</span>
-                          <span class="toggle-label-off">EN</span>
-                        </label>
-                      </div>
-                    </ul>
-                  </nav>
+                  <!-- Toggle language button -->
+                <div class="toggle-language">
+                  <input
+                    type="checkbox"
+                    id="toggle-button"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
                 </div>
-              </div>
-            </div>
-        </header>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
         <main>
             <section class="container">
                 <div class="hero-section" >
@@ -51,11 +51,11 @@
                         <span>7/250</span>
                     </div>
                     <form  class="form-container">
-                        <textarea id="enterText" name="enterText">ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების
+                        <textarea class="enterText" name="enterText">ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების
                         </textarea>    
                     </form>
                     <div class="btn-container">
-                        <input class="clear-btn" type="reset"/>
+                        <input class="clear-btn" type="reset" placeholder="გაასუფთავე"/>
                         <input type="submit" value="Submit">
 
                     </div>
@@ -88,5 +88,6 @@
                 </div>
               </footer>
         </main>
-    </body>
+        <script src="../js/validation.js"></script>
+  </body>
 </html>

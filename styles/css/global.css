@@ -1025,40 +1025,48 @@ body main .hero-section span {
   padding-bottom: 20px;
 }
 
-.label-box {
+body {
+  background-color: #f0f4f8;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.label-box label {
+body main {
+  flex: 1;
+}
+body main .label-box {
+  display: flex;
+  flex-direction: column;
+}
+body main .label-box label {
   font-family: "FiraGO", sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: #496ac1;
   letter-spacing: 0.75px;
 }
-.label-box span {
+body main .label-box span {
   align-self: flex-end;
   text-align: end;
   font-size: 16px;
   margin-right: 10px;
 }
-
-.form-container textarea {
+body main .form-container textarea {
   width: 1180px;
   height: 400PX;
   border: 1px solid #496ac1;
+  border-radius: 6px;
   resize: none;
   padding: 30px 0 0 30px;
   font-size: 16px;
   color: #2c2c2c;
 }
-
-.btn-container {
+body main .btn-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 28px;
 }
-.btn-container input {
-  outline: none;
+body main .btn-container input {
   padding: 15px 50px;
   border: 1px solid #496ac1;
   border-radius: 6px;
@@ -1067,7 +1075,13 @@ body main .hero-section span {
   font-weight: 500;
   color: #496ac1;
 }
-.btn-container :nth-child(2) {
+body main .btn-container :nth-child(2) {
   background-color: #496ac1;
   color: #ffffff;
+}
+body main .is-valid {
+  border: 2.5px solid green;
+}
+body main .not-valid {
+  border: 2.5px solid red;
 }/*# sourceMappingURL=global.css.map */
