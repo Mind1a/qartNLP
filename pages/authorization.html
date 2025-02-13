@@ -8,21 +8,22 @@
 </head>
 <body class="body">
     <div class="container" id="container">
-        <a href="../index.html"><img src="../assets/authorization/cancel.png" class="cancel" id="blue-X"></a>
-        <a href="../index.html"><img src="../assets/authorization/cancel-white.png" class="cancel-white" id="white-X"></a>
+        <a href="../index.html"><img src="../assets/svg/cancel.svg" class="cancel" id="blue-X"></a>
+        <a href="../index.html"><img src="../assets/svg/cancel-white.svg" class="cancel-white" id="white-X"></a>
         <div class="form-container sign-in" id="sign-in">
             <form id="authorization-form" novalidate>
                 <h2>ავტორიზაცია</h2>
                 <span id="email-label">ელ.ფოსტა</span>
                 <input type="email" id="email-input">
                 <span id="password-label">პაროლი</span>
-                <div class="password" id="password-input">
+                <div class="password" id="password-input-id">
                     <input type="password" id="password-input">
-                    <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
+                    <img src="../assets/svg/errorhide.svg" id="error-hide" onclick="showPassword(this)" style="display: none;">
+                    <img src="../assets/svg/hide.svg" id="hide-password" onclick="showPassword(this)">
                 </div>
                 <span class="forget" id="forget"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
                 <button type="submit">ავტორიზაცია</button>
-                <button class="google"><img src="../assets/authorization/google.png">Sign in with Google</button>
+                <button class="google"><img src="../assets/svg/google-logo.svg">Sign in with Google</button>
             </form>
         </div>
 
@@ -45,12 +46,12 @@
                     <span id="password-label">ახალი პაროლი</span>
                     <div class="password">
                         <input type="password" id="password-input">
-                        <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
+                        <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
                     </div>
                     <span id="reset-password-label">გაიმეორეთ პაროლი</span>
                     <div class="password">
                         <input type="password" id="reset-password-input">
-                        <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
+                        <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
                     </div>
                     <button type="submit" id="save">შენახვა</button>
                 </form>
@@ -75,20 +76,20 @@
                 <span id="password-label">პაროლი</span>
                 <div class="password">
                     <input type="password" id="password-input">
-                    <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
+                    <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
                 </div>
                 <span id="reset-password-label">გაიმეორეთ პაროლი</span>
                 <div class="password">
                     <input type="password" id="reset-password-input">
-                    <img src="../assets/authorization/hide.png" onclick="showPassword(this)">
+                    <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
                 </div>
                 <div class="agreement">
-                    <img src="../assets/authorization/success-one.png" style="display: none;" class="success-box box" id="success-box">
-                    <img src="../assets/authorization/box.png" class="box" id="box">
+                    <img src="../assets/svg/success.svg" style="display: none;" class="success-box box" id="success-box">
+                    <img src="../assets/svg/box.svg" class="box" id="box">
                     <a href="#" class="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</a>
                 </div>
                 <button type="submit" class="register-btn" id="register-btn">რეგისტრაცია</button>
-                <button class="google"><img src="../assets/authorization/google.png">Sign in with Google</button>
+                <button class="google"><img src="../assets/svg/google-logo.svg">Sign in with Google</button>
             </form>
         </div>
 

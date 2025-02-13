@@ -4,7 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
+    min-height: 100dvh; 
+    height: auto;
 
     *{
         margin: 0;
@@ -14,14 +15,18 @@
     .container{
         width: 1180px;
         max-width: 1180px;
-        height: 100vh;
+        height: 100dvh;
+
         background-color: $text-color-02;
         position: relative;
-        overflow: hidden;
         box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.1),
                     0px 130px 130px rgba(0, 0, 0, 0.09), 0px 292px 175px rgba(0, 0, 0, 0.05),
                     0px 519px 208px rgba(0, 0, 0, 0.01), 0px 811px 227px rgba(0, 0, 0, 0);  
         
+
+                    > div{
+                        height: 100vh;
+                    }
         .forget-password{
             img{
                 position: absolute;
@@ -32,7 +37,6 @@
             }
         }
         span{
-            font-size: 16px;
             line-height: 19.2px;
             color: $button-text-color;
             margin-bottom: 8px;
@@ -74,7 +78,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: 100vh;
             transition: all 0.6s ease-in-out;
             button{
                 font-family: "FiraGO", sans-serif;
@@ -85,7 +89,6 @@
                 justify-content: center;
                 flex-direction: column;
                 height: 100%;
-                width: 340px;
                 max-width: 340px;
                 .error-text{
                     color: $error-color;
@@ -103,9 +106,6 @@
                     font-size: 16px;
                     padding: 12px;
                     margin-bottom: 20px;
-                }
-                input:hover{
-                    border: 1px solid $button-text-color;
                 }
                 input:focus{
                     border: 1px solid $button-text-color;
@@ -135,7 +135,7 @@
                 }
                 button{
                     width: 340px;
-                    height: 40px;
+                    min-height: 40px;
                     border-radius: 6px;
                     margin-bottom: 20px;
                     background-color: $header-bg-color;
@@ -289,7 +289,7 @@
         background-color: transparent;
         border: 1px solid $text-color-02;
         color: $text-color-02;
-        height: 40px;
+        min-height: 40px;
         border-radius: 6px;
         font-size: 16px;
         line-height: 19.2px;
@@ -319,4 +319,22 @@
             }
         }
     }
+}
+
+
+// classes for displays
+
+.none{
+    display: none !important;
+}
+.block{
+    display: block !important;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-text {
+    color: red;
 }

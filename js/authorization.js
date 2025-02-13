@@ -1,6 +1,8 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
+const whiteX = document.getElementById("white-X");
+const blueX = document.getElementById("blue-X");
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -13,35 +15,17 @@ loginBtn.addEventListener('click', () => {
 });
 
 function toggleX() {
-    let whiteX = document.getElementById("white-X");
-    let blueX = document.getElementById("blue-X");
-
-    if (container.classList.contains("active")) {
-        whiteX.style.display = "none";
-        blueX.style.display = "block";
-    } else {
-        whiteX.style.display = "block";
-        blueX.style.display = "none";
-    }
+    whiteX.classList.toggle("none", container.classList.contains("active"));
+    whiteX.classList.toggle("block", !container.classList.contains("active"));
+    
+    blueX.classList.toggle("none", !container.classList.contains("active"));
+    blueX.classList.toggle("block", container.classList.contains("active"));
 }
 
 function showPassword(icon){
     let passwordField = icon.previousElementSibling;
     passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
-
-
-// go back function
-// function goBack(){
-//     let authoritation = document.getElementById("sign-in")
-//     let forgetPassword = document.getElementById("forget-password")
-//     let authoritationBtn = document.getElementById("authoritation")
-
-//     forgetPassword.style.display = "none";
-//     authoritation.style.display = "flex";
-//     authoritationBtn.style.display = "none";
-// }
-
 
 let box = document.getElementById("box");
     let successBox = document.getElementById("success-box");
@@ -65,21 +49,6 @@ let box = document.getElementById("box");
             successBox.style.display = "block";
         }
     });
-
-// function success(){
-//     let box = document.getElementById("box")
-//     let successBox = document.getElementById("success-box")
-
-//     if(box.style.display === "none") {
-//         box.style.display = "block";
-//         successBox.style.display = "none";
-//     } else {
-//         box.style.display = "none";
-//         successBox.style.display = "block";
-//     }
-// }
-
-// const forget = document.getElementById("forget").addEventListener("click", forgetPassword())
 
 const forget = document.getElementById("forget")
 forget.addEventListener("click", () => {
@@ -151,9 +120,7 @@ function checkInput(){
 
 const register = document.getElementById("register-btn")
 console.log(register)
-register.addEventListener("click", function () {
-    window.location.href = "./sucessPage.html";
-});
+// register.addEventListener("click", function () {
+//     window.location.href = "./sucessPage.html";
+// });
 
-
-// document.querySelectorAll("form").forEach(form => form.setAttribute("novalidate", "true"));
