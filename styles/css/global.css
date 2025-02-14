@@ -803,7 +803,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form .password #hide-password {
   display: block;
-  z-index: 2;
 }
 .body .container.active .sign-in {
   transform: translateX(100%);
@@ -917,6 +916,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   font-size: 14px;
   color: #496ac1;
 }
+.body .container .form-container .agreement .agree-error {
+  color: red;
+}
 
 .none {
   display: none !important;
@@ -924,6 +926,10 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 
 .block {
   display: block !important;
+}
+
+.flex {
+  display: flex !important;
 }
 
 body .main-sucess {

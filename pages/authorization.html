@@ -18,8 +18,8 @@
                 <label for="password-input" id="password-label">პაროლი</label>
                 <div class="password" id="password-input-id">
                     <input type="password" id="password-input" name="password">
-                    <img src="../assets/svg/hide.svg" id="hide-password">
-                    <img src="../assets/svg/errorhide.svg" id="error-hide">
+                    <img src="../assets/svg/hide.svg" id="hide-password" class="password-icon">
+                    <img src="../assets/svg/errorhide.svg" id="error-hide" class="password-error-icon">
                 </div>
                 <span class="forget" id="forget"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
                 <button type="submit">ავტორიზაცია</button>
@@ -32,26 +32,28 @@
             <div class="form-container sign-in">
                 <form id="forgetpassword-form" novalidate>
                     <h2>დაგავიწყდა პაროლი?</h2>
-                    <span id="email-label">ელ.ფოსტა</span>
-                    <input type="email" id="email-input">
+                    <label for="forget-password-email-label" id="forget-password-email-label">ელ.ფოსტა</label>
+                    <input type="email" id="forget-password-email-input">
                     <button type="submit" id="check">პაროლის აღდგენა</button>
                 </form>
             </div>
         </section>
 
         <section class="resolve-password" id="resolve-password" style="display: none;">
-            <div class="form-container sign-in">
+            <div class="form-container sign-in" id="resolve">
                 <form id="resetpassword-form" novalidate>
                     <h2>პაროლის აღდგენა</h2>
-                    <span id="password-label">ახალი პაროლი</span>
+                    <label for="resetform-password-input" id="resetform-password-label">ახალი პაროლი</label>
                     <div class="password">
-                        <input type="password" id="password-input">
-                        <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
+                        <input type="password" id="resetform-password-input">
+                        <img src="../assets/svg/hide.svg" id="resetform-password-hide-password" class="password-icon">
+                        <img src="../assets/svg/errorhide.svg" id="resetfrom-password-error-hide" class="password-error-icon" style="display: none;">
                     </div>
-                    <span id="reset-password-label">გაიმეორეთ პაროლი</span>
+                    <label for="reset-password-input" id="reset-password-label">გაიმეორეთ პაროლი</label>
                     <div class="password">
                         <input type="password" id="reset-password-input">
-                        <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
+                        <img src="../assets/svg/hide.svg" id="reset-password-hide-password" class="password-icon">
+                        <img src="../assets/svg/errorhide.svg" id="reset-password-error-hide" class="password-error-icon" style="display: none;">
                     </div>
                     <button type="submit" id="save">შენახვა</button>
                 </form>
@@ -59,34 +61,36 @@
         </section>
 
         <div class="form-container sign-up">
-            <form id="registerForm" novalidate>
+            <form id="register-form" novalidate>
                 <h2>რეგისტრაცია</h2>
                 <div class="person">
                     <div>
-                        <span id="name-label">სახელი</span>
-                        <input type="text" id="name-input">
+                        <label for="name-input" id="name-label">სახელი</label>
+                        <input type="text" id="name-input" name="name">
                     </div>
                     <div>
-                        <span id="surname-label">გვარი</span>
-                        <input type="text" id="surname-input">
+                        <label for="surname-input" id="surname-label">გვარი</label>
+                        <input type="text" id="surname-input" name="surname">
                     </div>
                 </div>
-                <span id="email-label">ელ.ფოსტა</span>
-                <input type="email" id="email-input">
-                <span id="password-label">პაროლი</span>
+                <label for="registration-email-input" id="registration-email-label">ელ.ფოსტა</label>
+                <input type="email" id="registration-email-input" name="email">
+                <label for="registration-password-input" id="registration-password-label">პაროლი</label>
                 <div class="password">
-                    <input type="password" id="password-input">
-                    <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
+                    <input type="password" id="registration-password-input" name="password">
+                    <img src="../assets/svg/hide.svg" id="registrationForm-password-hide-password" class="password-icon">
+                    <img src="../assets/svg/errorhide.svg" id="registrationForm-password-error-hide" class="password-error-icon" style="display: none;">
                 </div>
-                <span id="reset-password-label">გაიმეორეთ პაროლი</span>
+                <label for="repeat-password-input" id="repeat-password-label">გაიმეორეთ პაროლი</label>
                 <div class="password">
-                    <input type="password" id="reset-password-input">
-                    <img src="../assets/svg/hide.svg" onclick="showPassword(this)">
+                    <input type="password" id="repeat-password-input">
+                    <img src="../assets/svg/hide.svg" id="registration-password-hide-password" class="password-icon">
+                    <img src="../assets/svg/errorhide.svg" id="registration-password-error-hide" class="password-error-icon" style="display: none;">
                 </div>
                 <div class="agreement">
                     <img src="../assets/svg/success.svg" style="display: none;" class="success-box box" id="success-box">
                     <img src="../assets/svg/box.svg" class="box" id="box">
-                    <a href="#" class="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</a>
+                    <a href="#" class="agree" id="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</a>
                 </div>
                 <button type="submit" class="register-btn" id="register-btn">რეგისტრაცია</button>
                 <button class="google"><img src="../assets/svg/google-logo.svg">Sign in with Google</button>
@@ -97,11 +101,11 @@
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <img src="../assets/svg/logo.svg">
-                    <button class="toggle-btn" id="login" onclick="showAuthorization()">ავტორიზაცია</button>
+                    <button class="toggle-btn" id="login">ავტორიზაცია</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <img src="../assets/svg/logo.svg">
-                    <button class="toggle-btn" id="authoritation" style="display: none;" onclick="showAuthorization()">ავტორიზაცია</button>
+                    <button class="toggle-btn" id="authoritation" style="display: none;">ავტორიზაცია</button>
                     <button class="toggle-btn" id="register">რეგისტრაცია</button>
                 </div>
             </div>

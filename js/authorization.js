@@ -24,6 +24,15 @@ function toggleX() {
 
 const hideIcon = document.getElementById("hide-password")
 const errorHideIcone = document.getElementById("error-hide")
+const resetFormHideIcon = document.getElementById("resetform-password-hide-password")
+const resetFormErrorHideIcon = document.getElementById("resetfrom-password-error-hide")
+const resetHideIcon = document.getElementById("reset-password-hide-password")
+const resetErrorHideIcon = document.getElementById("reset-password-error-hide")
+
+const registrationFormHideIcon = document.getElementById("registrationForm-password-hide-password")
+const registrationFormErrorIcon = document.getElementById("registrationForm-password-error-hide")
+const registrationHideIcon = document.getElementById("registration-password-hide-password")
+const registrationErrorIcon = document.getElementById("registration-password-error-hide")
 
 hideIcon.addEventListener("click", () => {
     showPassword(this)
@@ -31,35 +40,89 @@ hideIcon.addEventListener("click", () => {
 errorHideIcone.addEventListener("click", () => {
     showPassword(this)
 })
+resetFormHideIcon.addEventListener("click", () => {
+    showResolveFormPassword(this)
+})
+resetFormErrorHideIcon.addEventListener("click", () => {
+    showResolveFormPassword(this)
+})
+resetHideIcon.addEventListener("click", () => {
+    showResolvePassword(this)
+})
+resetErrorHideIcon.addEventListener("click", () => {
+    showResolvePassword(this)
+})
+registrationFormHideIcon.addEventListener("click", () => {
+    showRegisterFormPassword(this)
+})
+registrationFormErrorIcon.addEventListener("click", () => {
+    showRegisterFormPassword(this)
+})
+registrationHideIcon.addEventListener("click", () => {
+    showRegisterPassword(this)
+})
+registrationErrorIcon.addEventListener("click", () => {
+    showRegisterPassword(this)
+})
 
 function showPassword(icon) {
-    let passwordField = document.getElementById("password-input"); // Directly target the input field
+    let passwordField = document.getElementById("password-input");
     if (passwordField) {
         passwordField.type = passwordField.type === "password" ? "text" : "password";
     }
 }
 
+function showResolveFormPassword(icon) {
+    let resetFromPasswordField = document.getElementById("resetform-password-input")
+    if(resetFromPasswordField){
+        resetFromPasswordField.type = resetFromPasswordField.type === "password" ? "text" : "password";
+    }
+}
+
+function showResolvePassword(icon) {
+    let resetPasswordField = document.getElementById("reset-password-input")
+    if(resetPasswordField){
+        resetPasswordField.type = resetPasswordField.type === "password" ? "text" : "password";
+    }
+}
+
+function showRegisterFormPassword(icon){
+    let registerFormPasswordField = document.getElementById("registration-password-input")
+    if(registerFormPasswordField){
+        registerFormPasswordField.type = registerFormPasswordField.type === "password" ? "text" : "password";
+    }
+}
+
+function showRegisterPassword(icon){
+    let registerPasswordField = document.getElementById("repeat-password-input")
+    if(registerPasswordField){
+        registerPasswordField.type = registerPasswordField.type === "password" ? "text" : "password";
+    }
+}
+
 let box = document.getElementById("box");
-    let successBox = document.getElementById("success-box");
+let successBox = document.getElementById("success-box");
 
     box.addEventListener("click", function () {
         if (box.style.display === "none") {
             box.style.display = "block";
             successBox.style.display = "none";
-        } else {
+        }else{
             box.style.display = "none";
             successBox.style.display = "block";
         }
+
     });
 
     successBox.addEventListener("click", function () {
         if (box.style.display === "none") {
             box.style.display = "block";
             successBox.style.display = "none";
-        } else {
+        }else {
             box.style.display = "none";
             successBox.style.display = "block";
         }
+
     });
 
 const forget = document.getElementById("forget")
@@ -81,10 +144,14 @@ function forgetPassword(formId){
     })
 }
 
-const authoritation = document.getElementById("authoritation")
+loginBtn.addEventListener("click", () => {
+    showAuthorization();
+})
 
-loginBtn.addEventListener("click", showAuthorization());
-authoritation.addEventListener("click", showAuthorization());
+const authorization = document.getElementById("authoritation")
+authorization.addEventListener("click", () => {
+    showAuthorization()
+})
 
 function showAuthorization(formId){
     let forgetPassword = document.getElementById("forget-password");
@@ -107,32 +174,3 @@ function showAuthorization(formId){
         successBox.style.display = "none"
     })
 }
-
-function resolvePassword(){
-    let forgetPassword = document.getElementById("forget-password");
-    let active = document.getElementById("sign-in");
-    let register = document.getElementById("authoritation")
-    let resolve = document.getElementById("resolve-password")
-
-    forgetPassword.style.display = "none";
-    active.style.display = "none";
-    register.style.display = "none";
-    resolve.style.display = "flex";
-}
-
-const check = document.getElementById("check")
-check.addEventListener("click", () => {
-    checkInput();
-})
-
-function checkInput(){
-        window.location.href = "#resolve-password";
-        resolvePassword();
-}
-
-const register = document.getElementById("register-btn")
-console.log(register)
-// register.addEventListener("click", function () {
-//     window.location.href = "./sucessPage.html";
-// });
-
