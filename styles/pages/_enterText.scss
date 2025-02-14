@@ -40,6 +40,10 @@ body{
                 font-size:16px;
                 color:$button-text-color;
             }
+            textarea:hover,
+            textarea:active{
+                border: 1px solid $header-bg-color;
+            }
         }
 
         .btn-container{
@@ -52,7 +56,7 @@ body{
                 border-radius: 6px;
                 background-color: $white;
 
-                font-size: 16p;
+                font-size: 16px;
                 font-weight: 500;
                 color:$header-bg-color;
 
@@ -61,6 +65,11 @@ body{
                 background-color: $header-bg-color;
                 color:$white;
             }
+            input:hover{
+                cursor: pointer;
+                background-color: $header-bg-color 50;
+            }
+            
         }
 
         .is-valid {

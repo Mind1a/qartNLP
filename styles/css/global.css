@@ -1061,6 +1061,10 @@ body main .form-container textarea {
   font-size: 16px;
   color: #2c2c2c;
 }
+body main .form-container textarea:hover,
+body main .form-container textarea:active {
+  border: 1px solid #496ac1;
+}
 body main .btn-container {
   display: flex;
   justify-content: space-between;
@@ -1071,13 +1075,17 @@ body main .btn-container input {
   border: 1px solid #496ac1;
   border-radius: 6px;
   background-color: #ffffff;
-  font-size: 16p;
+  font-size: 16px;
   font-weight: 500;
   color: #496ac1;
 }
 body main .btn-container :nth-child(2) {
   background-color: #496ac1;
   color: #ffffff;
+}
+body main .btn-container input:hover {
+  cursor: pointer;
+  background-color: #496ac1 50;
 }
 body main .is-valid {
   border: 2.5px solid green;
