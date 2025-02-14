@@ -1061,7 +1061,7 @@ main .aboutProject .contact-info .adress-number {
   gap: 16px;
   margin: 26px 0 35px;
 }
-main .aboutProject .contact-info .adress-number p {
+main .aboutProject .contact-info .adress-number a {
   color: #2c2c2c;
   font-size: 18px;
   font-weight: 350;
@@ -1094,6 +1094,9 @@ main .aboutProject .contact-info form .form-layout .username-mail .username inpu
   font-size: 18px;
   padding: 0 8px;
 }
+main .aboutProject .contact-info form .form-layout .message {
+  border-radius: 8px;
+}
 main .aboutProject .contact-info form .form-layout .message label, main .aboutProject .contact-info form .form-layout .message textarea {
   display: block;
 }
@@ -1120,4 +1123,14 @@ main .aboutProject .contact-info form .form-layout button {
   color: #496ac1;
   font-family: "FiraGo", sans-serif;
   font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+main .aboutProject .contact-info form .form-layout button p {
+  transition: color 0.3s ease;
+}
+main .aboutProject .contact-info form .form-layout button:hover {
+  background-color: #496ac1;
+}
+main .aboutProject .contact-info form .form-layout button:hover p {
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */
