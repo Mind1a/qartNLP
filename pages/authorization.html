@@ -18,6 +18,7 @@
                 <label for="password-input" id="password-label">პაროლი</label>
                 <div class="password" id="password-input-id">
                     <input type="password" id="password-input" name="password">
+                    <img src="../assets/svg/show-password.svg" id="show">
                     <img src="../assets/svg/hide.svg" id="hide-password" class="password-icon">
                     <img src="../assets/svg/errorhide.svg" id="error-hide" class="password-error-icon">
                 </div>
@@ -27,8 +28,8 @@
             </form>
         </div>
 
-        <section class="forget-password" id="forget-password" style="display: none;">
-            <img src="../assets/authorization/back.png" alt="გადადით უკან" id="back" style="display: none;">
+        <section class="forget-password" id="forget-password">
+            <a href="#sign-in"><img src="../assets/svg/back.svg" alt="გადადით უკან" id="back"></a>
             <div class="form-container sign-in">
                 <form id="forgetpassword-form" novalidate>
                     <h2>დაგავიწყდა პაროლი?</h2>
@@ -39,7 +40,7 @@
             </div>
         </section>
 
-        <section class="resolve-password" id="resolve-password" style="display: none;">
+        <section class="resolve-password" id="resolve-password">
             <div class="form-container sign-in" id="resolve">
                 <form id="resetpassword-form" novalidate>
                     <h2>პაროლის აღდგენა</h2>
@@ -47,13 +48,13 @@
                     <div class="password">
                         <input type="password" id="resetform-password-input">
                         <img src="../assets/svg/hide.svg" id="resetform-password-hide-password" class="password-icon">
-                        <img src="../assets/svg/errorhide.svg" id="resetfrom-password-error-hide" class="password-error-icon" style="display: none;">
+                        <img src="../assets/svg/errorhide.svg" id="resetfrom-password-error-hide" class="password-error-icon">
                     </div>
                     <label for="reset-password-input" id="reset-password-label">გაიმეორეთ პაროლი</label>
                     <div class="password">
                         <input type="password" id="reset-password-input">
                         <img src="../assets/svg/hide.svg" id="reset-password-hide-password" class="password-icon">
-                        <img src="../assets/svg/errorhide.svg" id="reset-password-error-hide" class="password-error-icon" style="display: none;">
+                        <img src="../assets/svg/errorhide.svg" id="reset-password-error-hide" class="password-error-icon">
                     </div>
                     <button type="submit" id="save">შენახვა</button>
                 </form>
@@ -79,16 +80,16 @@
                 <div class="password">
                     <input type="password" id="registration-password-input" name="password">
                     <img src="../assets/svg/hide.svg" id="registrationForm-password-hide-password" class="password-icon">
-                    <img src="../assets/svg/errorhide.svg" id="registrationForm-password-error-hide" class="password-error-icon" style="display: none;">
+                    <img src="../assets/svg/errorhide.svg" id="registrationForm-password-error-hide" class="password-error-icon">
                 </div>
                 <label for="repeat-password-input" id="repeat-password-label">გაიმეორეთ პაროლი</label>
                 <div class="password">
                     <input type="password" id="repeat-password-input">
                     <img src="../assets/svg/hide.svg" id="registration-password-hide-password" class="password-icon">
-                    <img src="../assets/svg/errorhide.svg" id="registration-password-error-hide" class="password-error-icon" style="display: none;">
+                    <img src="../assets/svg/errorhide.svg" id="registration-password-error-hide" class="password-error-icon">
                 </div>
                 <div class="agreement">
-                    <img src="../assets/svg/success.svg" style="display: none;" class="success-box box" id="success-box">
+                    <img src="../assets/svg/success.svg" class="success-box box" id="success-box">
                     <img src="../assets/svg/box.svg" class="box" id="box">
                     <a href="#" class="agree" id="agree">ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</a>
                 </div>
@@ -105,14 +106,13 @@
                 </div>
                 <div class="toggle-panel toggle-right">
                     <img src="../assets/svg/logo.svg">
-                    <button class="toggle-btn" id="authoritation" style="display: none;">ავტორიზაცია</button>
+                    <button class="toggle-btn" id="authoritation">ავტორიზაცია</button>
                     <button class="toggle-btn" id="register">რეგისტრაცია</button>
                 </div>
             </div>
         </div>
     </div>
     
-    <script src="index.js"></script>
     <script src="../js/authorization.js"></script>
     <script src="../js/validation.js"></script>
 </body>

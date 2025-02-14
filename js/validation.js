@@ -47,8 +47,12 @@
         const forgetPasswordEmailLabel = document.getElementById("forget-password-email-label")
         if(email.value.trim() === "" || email.value === null){
             showEmailErrors(email, forgetPasswordEmailLabel, "ელ.ფოსტა *");
+            const backImg = document.getElementById("back")
+            backImg.style.display = "block"
         }else if(!isValidEmail(email.value)){
             showEmailErrors(email, forgetPasswordEmailLabel, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
+            const backImg = document.getElementById("back")
+            backImg.style.display = "block"
         }else{           
             clearEmailErrors(email, forgetPasswordEmailLabel, "ელ.ფოსტა");
             resolvePassword()
@@ -61,10 +65,10 @@
         let register = document.getElementById("authoritation")
         let resolve = document.getElementById("resolve-password")
     
-        forgetPassword.classList.add("none");
-        active.classList.add("none")
-        register.classList.add("none")
-        resolve.classList.add("flex");
+        forgetPassword.style.display = "none"
+        active.style.display = "none"
+        register.style.display = "none"
+        resolve.style.display = "flex"
     }
 
 
@@ -248,6 +252,11 @@
         const text = document.getElementById("agree");
         if (text) {
             text.classList.remove("agree-error");
+        }
+
+        const backImg = document.getElementById("back")
+        if(backImg){
+            backImg.style.display = "none"
         }
     }
     

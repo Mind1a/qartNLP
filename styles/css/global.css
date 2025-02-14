@@ -642,7 +642,19 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 .body .container > div {
   height: 100vh;
 }
+.body .container #show {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+.body .container .resolve-password {
+  display: none;
+}
+.body .container .forget-password {
+  display: none;
+}
 .body .container .forget-password img {
+  display: none;
   position: absolute;
   top: 54px;
   left: 40px;
@@ -902,6 +914,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 .body .toggle img {
   width: 235px;
 }
+.body #authoritation {
+  display: none;
+}
 .body .container .form-container .agreement {
   display: flex;
   align-items: center;
@@ -917,7 +932,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   color: #496ac1;
 }
 .body .container .form-container .agreement .agree-error {
-  color: red;
+  color: #E73B37;
 }
 
 .none {

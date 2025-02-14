@@ -153,15 +153,13 @@ authorization.addEventListener("click", () => {
     showAuthorization()
 })
 
-function showAuthorization(formId){
-    let forgetPassword = document.getElementById("forget-password");
+function showAuthorization(){
     let active = document.getElementById("sign-in");
-    let register = document.getElementById("authoritation")
+    let forgetPassword = document.getElementById("forget-password");
     let resolve = document.getElementById("resolve-password")
 
-    forgetPassword.style.display = "none";
     active.style.display = "flex";
-    register.style.display = "none";
+    forgetPassword.style.display = "none";
     resolve.style.display = "none";
 
     document.querySelectorAll(".form-container").forEach(form => {
@@ -173,4 +171,19 @@ function showAuthorization(formId){
         box.style.display = "block"
         successBox.style.display = "none"
     })
+}
+
+const backImg = document.getElementById("back")
+backImg.addEventListener("click", () => {
+    goBackToAuthorization()
+})
+
+function goBackToAuthorization(){
+    let active = document.getElementById("sign-in");
+    let forgetPassword = document.getElementById("forget-password");
+    let resolve = document.getElementById("resolve-password")
+
+    active.style.display = "flex"
+    forgetPassword.style.display = "none"
+    resolve.style.display = "none"
 }

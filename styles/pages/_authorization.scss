@@ -27,8 +27,19 @@
                     > div{
                         height: 100vh;
                     }
+
+        #show{
+            display: none;
+            width: 16px;
+            height: 16px;
+        }
+        .resolve-password{
+            display: none;
+        }
         .forget-password{
+            display: none;
             img{
+                display: none;
                 position: absolute;
                 top: 54px;
                 left: 40px;
@@ -310,6 +321,9 @@
     .toggle img{
         width: 235px;
     }
+    #authoritation{
+        display: none;
+    }
 
     .container{
         .form-container{
@@ -328,7 +342,7 @@
                     color: $header-bg-color;
                 }
                 .agree-error{
-                    color: red;
+                    color: $error-color;
                 }
             }
         }
