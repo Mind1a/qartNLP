@@ -41,6 +41,11 @@
             color: $button-text-color;
             margin-bottom: 8px;
         }
+        label{
+            line-height: 19.2px;
+            color: $button-text-color;
+            margin-bottom: 8px;
+        }
 
         .cancel, .cancel-white{
             position: absolute;
@@ -95,7 +100,6 @@
                 }
                 .error{
                     border: 1px solid $error-color;
-                    color: $error-color;
                 }
                 input{
                     border: 1px solid $header-bg-color;
@@ -185,6 +189,13 @@
                         top: 12px;
                         right: 12px;
                         cursor: pointer;
+                    }
+                    #error-hide{
+                        display: none;
+                    }
+                    #hide-password{
+                        display: block;
+                        z-index: 2;
                     }
                 }
             }
@@ -329,12 +340,4 @@
 }
 .block{
     display: block !important;
-}
-
-.error {
-    border: 1px solid red;
-}
-
-.error-text {
-    color: red;
 }

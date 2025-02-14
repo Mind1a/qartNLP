@@ -22,9 +22,21 @@ function toggleX() {
     blueX.classList.toggle("block", container.classList.contains("active"));
 }
 
-function showPassword(icon){
-    let passwordField = icon.previousElementSibling;
-    passwordField.type = passwordField.type === "password" ? "text" : "password";
+const hideIcon = document.getElementById("hide-password")
+const errorHideIcone = document.getElementById("error-hide")
+
+hideIcon.addEventListener("click", () => {
+    showPassword(this)
+})
+errorHideIcone.addEventListener("click", () => {
+    showPassword(this)
+})
+
+function showPassword(icon) {
+    let passwordField = document.getElementById("password-input"); // Directly target the input field
+    if (passwordField) {
+        passwordField.type = passwordField.type === "password" ? "text" : "password";
+    }
 }
 
 let box = document.getElementById("box");

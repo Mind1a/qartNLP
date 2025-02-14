@@ -654,6 +654,11 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   color: #2c2c2c;
   margin-bottom: 8px;
 }
+.body .container label {
+  line-height: 19.2px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
 .body .container .cancel, .body .container .cancel-white {
   position: absolute;
   top: 48px;
@@ -708,7 +713,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form .error {
   border: 1px solid #E73B37;
-  color: #E73B37;
 }
 .body .container .form-container form input {
   border: 1px solid #496ac1;
@@ -793,6 +797,13 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   top: 12px;
   right: 12px;
   cursor: pointer;
+}
+.body .container .form-container form .password #error-hide {
+  display: none;
+}
+.body .container .form-container form .password #hide-password {
+  display: block;
+  z-index: 2;
 }
 .body .container.active .sign-in {
   transform: translateX(100%);
@@ -913,14 +924,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 
 .block {
   display: block !important;
-}
-
-.error {
-  border: 1px solid red;
-}
-
-.error-text {
-  color: red;
 }
 
 body .main-sucess {
