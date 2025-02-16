@@ -1063,9 +1063,11 @@ main .aboutProject .contact-info .adress-number {
 }
 main .aboutProject .contact-info .adress-number a {
   color: #2c2c2c;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
   font-size: 18px;
   font-weight: 350;
-  text-align: center;
 }
 main .aboutProject .contact-info form .form-layout {
   display: flex;
@@ -1075,6 +1077,9 @@ main .aboutProject .contact-info form .form-layout label {
   font-size: 18px;
   color: #2c2c2c;
   margin-bottom: 16px;
+}
+main .aboutProject .contact-info form .form-layout label.emptyInputLabel {
+  color: #E73B37;
 }
 main .aboutProject .contact-info form .form-layout .username-mail {
   display: flex;
@@ -1094,6 +1099,9 @@ main .aboutProject .contact-info form .form-layout .username-mail .username inpu
   font-size: 18px;
   padding: 0 8px;
 }
+main .aboutProject .contact-info form .form-layout .username-mail .username input.emptyInput, main .aboutProject .contact-info form .form-layout .username-mail .email input.emptyInput {
+  border-color: #E73B37;
+}
 main .aboutProject .contact-info form .form-layout .message {
   border-radius: 8px;
 }
@@ -1110,6 +1118,9 @@ main .aboutProject .contact-info form .form-layout .message textarea {
   outline: none;
   font-size: 18px;
   padding: 6px 8px;
+}
+main .aboutProject .contact-info form .form-layout .message textarea.emptyInput {
+  border-color: red;
 }
 main .aboutProject .contact-info form .form-layout button {
   align-self: center;

@@ -74,9 +74,10 @@ main {
         margin: 26px 0 35px     ;
         a{
             color: $button-text-color;
+            width: fit-content;
+            margin: 0 auto;
             font-size: 18px;
             font-weight: 350;
-            text-align: center;
         }
       }
 
@@ -89,6 +90,10 @@ main {
                 font-size: 18px;
                 color: $button-text-color;
                 margin-bottom: 16px;
+
+                &.emptyInputLabel{
+                  color: $error-color;
+                }
             }
             
             .username-mail{
@@ -110,6 +115,10 @@ main {
                         outline: none;
                         font-size: 18px;
                         padding: 0 8px;
+
+                        &.emptyInput {
+                          border-color: $error-color;
+                        }
                     }
     
                 }
@@ -133,15 +142,19 @@ main {
                     font-size: 18px;
                     padding: 6px 8px;
 
+                    &.emptyInput {
+                      border-color: red;
+                    }
+
                     // &::-webkit-scrollbar {
                     //   border-radius: 8px;
                     //   min-height: 30px;
                     // }
 
                   //   &::-webkit-scrollbar-thumb {
-                  //     background-color: $header-bg-color; // Thumb color
+                  //     background-color: $header-bg-color; 
                   //     border-radius: 8px;
-                  //     min-height: 0px; // Ensures the scroller is always visible
+                  //     min-height: 0px;
                   //     cursor: pointer;
                   // }
                   
