@@ -74,28 +74,29 @@ const passwordField = document.getElementById("password-input");
 function toggleErrorPassword() {
     if (passwordField.type === "password") {
         passwordField.type = "text";
-        errorHideIcone.style.display = "none";  
-        showErrorIcon.style.display = "block"; 
+        if(errorHideIcone.classList.contains("block")){
+            errorHideIcone.classList.remove("block")
+        }
+        showErrorIcon.classList.add("block")
     } else {
         passwordField.type = "password";
-        errorHideIcone.style.display = "block"; 
-        showErrorIcon.style.display = "none";  
+
     }
 }
 
-// Event listeners for both icons
-hideIcon.addEventListener("click", togglePassword);
+
+hideIcon.addEventListener("click", togglePassword); //default block
 showIcon.addEventListener("click", togglePassword);
 
 function togglePassword() {
     if (passwordField.type === "password") {
         passwordField.type = "text";
-        hideIcon.style.display = "none";  
-        showIcon.style.display = "block"; 
+        hideIcon.classList.add("none")
+        showIcon.classList.add("block")
     } else {
         passwordField.type = "password";
-        hideIcon.style.display = "block"; 
-        showIcon.style.display = "none";  
+        hideIcon.classList.remove("none")
+        showIcon.classList.remove("block")
     }
 }
 

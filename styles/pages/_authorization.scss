@@ -110,6 +110,10 @@
                 flex-direction: column;
                 height: 100%;
                 max-width: 340px;
+                .error-message{
+                    display: none;
+                    margin-bottom: 25px;
+                }
                 .error-text{
                     color: $error-color;
                 }

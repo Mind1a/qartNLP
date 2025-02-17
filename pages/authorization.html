@@ -13,13 +13,14 @@
         <div class="form-container sign-in" id="sign-in">
             <form id="authorization-form" novalidate>
                 <h2>ავტორიზაცია</h2>
+                <p class="error-message" id="error-message"></p>
                 <label for="email-input" id="email-label">ელ.ფოსტა</label>
                 <input type="email" id="email-input" name="email">
                 <label for="password-input" id="password-label">პაროლი</label>
                 <div class="password" id="password-input-id">
                     <input type="password" id="password-input" name="password">
-                    <img src="../assets/svg/show-password.svg" id="show">
-                    <img src="../assets/svg/error-show-password.svg" id="show-error">
+                    <img src="../assets/svg/show-password.svg" id="show" class="show">
+                    <img src="../assets/svg/error-show-password.svg" id="show-error" class="show-error">
                     <img src="../assets/svg/hide.svg" id="hide-password" class="password-icon">
                     <img src="../assets/svg/errorhide.svg" id="error-hide" class="password-error-icon">
                 </div>
@@ -34,6 +35,7 @@
             <div class="form-container sign-in">
                 <form id="forgetpassword-form" novalidate>
                     <h2>დაგავიწყდა პაროლი?</h2>
+                    <p class="error-message" id="forget-password-error-message"></p>
                     <label for="forget-password-email-label" id="forget-password-email-label">ელ.ფოსტა</label>
                     <input type="email" id="forget-password-email-input">
                     <button type="submit" id="check">პაროლის აღდგენა</button>
@@ -45,6 +47,7 @@
             <div class="form-container sign-in" id="resolve">
                 <form id="resetpassword-form" novalidate>
                     <h2>პაროლის აღდგენა</h2>
+                    <p class="error-message" id="reset-password-error-message"></p>
                     <label for="resetform-password-input" id="resetform-password-label">ახალი პაროლი</label>
                     <div class="password">
                         <input type="password" id="resetform-password-input">
@@ -65,6 +68,7 @@
         <div class="form-container sign-up">
             <form id="register-form" novalidate>
                 <h2>რეგისტრაცია</h2>
+                <p class="error-message" id="register-form-error-message"></p>
                 <div class="person">
                     <div>
                         <label for="name-input" id="name-label">სახელი</label>
