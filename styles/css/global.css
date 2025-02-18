@@ -508,7 +508,7 @@ body main .section_1_content p {
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
-  color: #E6E6E6;
+  color: #e6e6e6;
 }
 body main .section_1_content .buttons {
   display: flex;
@@ -549,7 +549,7 @@ body main .section_1_content .buttons div:hover a {
 }
 body main .opportunities_section {
   margin-top: 80px;
-  margin-bottom: 368px;
+  margin-bottom: 150px;
 }
 body main .opportunities_section h3 {
   font-size: 28px;
