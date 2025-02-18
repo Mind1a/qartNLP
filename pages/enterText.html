@@ -48,10 +48,10 @@
                 <div class="hero-section" >
                     <div class="label-box">
                         <label>შეიყვანეთ ტექსი</label>
-                        <span>7/250</span>
+                        <span class="wordsAmount">7/250</span>
                     </div>
                     <form  class="form-container">
-                        <textarea class="enterText" name="enterText" placeholder="ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების"></textarea>    
+                        <textarea class="enterText"  minlength="7" maxlength="250" name="enterText" placeholder="ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების"></textarea>    
                         <div class="btn-container">
                             <input class="btn" type="reset" value="გაასუფთავე"/>
                             <input class="btn" type="submit"  value="გაანალიზე"/>
@@ -86,6 +86,6 @@
                 </div>
               </footer>
         </main>
-        <script src="../js/validation.js"></script>
+        <script src="../js/lamatizationValidation.js"></script>
   </body>
 </html>

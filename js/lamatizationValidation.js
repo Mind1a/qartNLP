@@ -1,9 +1,32 @@
+
 const enterText = document.querySelector(".enterText");
 const formContainer = document.querySelector(".form-container");
+const AmountWords = document.querySelector(".wordsAmount");
+const container = document.querySelector(".label-box");
 
-const validWordsNumber = (inputs) => inputs.trim().split(" ").length > 250;
+const validWordsNumber = (inputs) => inputs.trim().split(" ").length;
+
 const requiredInput = (input) => input.trim() !== "";
- 
+
+
+
+enterText.addEventListener("input", function() {
+  const item = validWordsNumber(enterText.value);
+  console.log(item);
+   const html = `
+     <span class="wordsAmount">${item}/250</span>
+   `
+   container.innerHTML = "";
+   container.insertAdjacentHTML("beforeend", html);
+});
+
+
+
+
+
+
+/*
+
 const checkTextareaValidation = function () {
   let result = true;
   const enterTextBox = enterText.value;
@@ -49,4 +72,4 @@ formContainer.addEventListener("submit", function (e) {
     .then((res) => console.log(res));
 });
 
- 
+ */
