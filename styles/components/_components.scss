@@ -3,11 +3,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'FiraGO', sans-serif;
+  font-family: "FiraGO", sans-serif;
 
   main {
     flex: 1;
-    
+
     .container {
       @include container;
     }
@@ -38,7 +38,7 @@ body {
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
-        color: #E6E6E6;
+        color: #e6e6e6;
       }
 
       .buttons {
@@ -89,7 +89,7 @@ body {
 
     .opportunities_section {
       margin-top: 80px;
-      margin-bottom: 368px;
+      margin-bottom: 150px;
 
       h3 {
         font-size: 28px;
@@ -112,7 +112,7 @@ body {
           border-radius: 20px;
           text-align: center;
 
-          img{
+          img {
             width: 100%;
             padding: 40px 40px 24px;
           }
@@ -144,7 +144,7 @@ body {
           .see_more {
             border: 1px solid $header-bg-color;
             padding: 10px 30px;
-            border-radius: 8px; 
+            border-radius: 8px;
             margin-top: 24px;
             cursor: pointer;
             transition: background-color 0.3s ease;
