@@ -18,36 +18,46 @@
         const passwordLabel = document.getElementById("password-label");
         const hideIcon = document.getElementById("hide-password");
         const errorHideIcone = document.getElementById("error-hide");
-        const errorMessage = document.getElementById("error-message");
+        const EmailErrorMessage = document.getElementById("email-error-message");
+        const PassowrdErrorMessage = document.getElementById("password-error-message");
     
-        let errors = [];
+        let emailErrors = [];
+        let passwordErrors = [];
     
         // Validate email field
         if (email.value.trim() === "" || email.value === null) {
-            errors.push("გთხოვთ შეიყვანოთ ელ ფოსტა *");
-            showEmailErrors(email, emailLabel, errorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა *");
+            emailErrors.push("გთხოვთ შეიყვანოთ ელ ფოსტა");
+            showEmailErrors(email, emailLabel, EmailErrorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა");
         } else if (!isValidEmail(email.value)) {
-            errors.push("გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
-            showEmailErrors(email, emailLabel, errorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
+            emailErrors.push("გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
+            showEmailErrors(email, emailLabel, EmailErrorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
         } else {
-            clearEmailErrors(email, emailLabel, errorMessage, "");
+            clearEmailErrors(email, emailLabel, EmailErrorMessage, "");
         }
     
         // Validate password field
         if (password.value.trim() === "" || password.value === null) {
-            errors.push("გთხოვთ შეიყვანოთ პაროლი *");
-            showPasswordErrors(password, passwordLabel, errorMessage, "გთხოვთ შეიყვანოთ პაროლი *", hideIcon, errorHideIcone);
+            passwordErrors.push("გთხოვთ შეიყვანოთ პაროლი");
+            showPasswordErrors(password, passwordLabel, PassowrdErrorMessage, "გთხოვთ შეიყვანოთ პაროლი", hideIcon, errorHideIcone);
         } else {
-            clearPasswordErrors(password, passwordLabel, errorMessage, "", hideIcon, errorHideIcone);
+            clearPasswordErrors(password, passwordLabel, PassowrdErrorMessage, "", hideIcon, errorHideIcone);
         }
     
         // Update error message box with all errors
-        if (errors.length > 0) {
-            errorMessage.innerHTML = errors.join("<br>");
-            errorMessage.classList.add("block");
+        if (emailErrors.length > 0) {
+            EmailErrorMessage.innerHTML = emailErrors.join("<br>");
+            EmailErrorMessage.classList.add("block");
         } else {
-            errorMessage.innerHTML = "";
-            errorMessage.classList.remove("block");
+            EmailErrorMessage.innerHTML = "";
+            EmailErrorMessage.classList.remove("block");
+        }
+
+        if (passwordErrors.length > 0) {
+            PassowrdErrorMessage.innerHTML = passwordErrors.join("<br>");
+            PassowrdErrorMessage.classList.add("block");
+        } else {
+            PassowrdErrorMessage.innerHTML = "";
+            PassowrdErrorMessage.classList.remove("block");
         }
     }
     
@@ -62,16 +72,30 @@
     function forgetPasswordErrors(email){
         const forgetPasswordEmailLabel = document.getElementById("forget-password-email-label")
         const errorMessage = document.getElementById("forget-password-error-message")
-        if(email.value.trim() === "" || email.value === null){
-            showEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა *")
-        }else{
-            clearEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა *");
-            if(!isValidEmail(email.value)){
-                showEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
-            }else{
-                clearEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "")
-                resolvePassword()
-            }
+
+        let emailErrors = [];
+
+        if (email.value.trim() === "" || email.value === null) {
+            emailErrors.push("გთხოვთ შეიყვანოთ ელ ფოსტა");
+            showEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა");
+        } else if (!isValidEmail(email.value)) {
+            emailErrors.push("გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
+            showEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
+        } else {
+            clearEmailErrors(email, forgetPasswordEmailLabel, errorMessage, "");
+            resolvePassword()
+        }
+
+        if (emailErrors.length > 0) {
+            errorMessage.innerHTML = emailErrors.join("<br>");
+            errorMessage.classList.add("block");
+            const img = document.getElementById("back")
+            img.classList.add("block")
+        } else {
+            errorMessage.innerHTML = "";
+            errorMessage.classList.remove("block");
+            const img = document.getElementById("back")
+            img.classList.remove("block")
         }
     }
 
@@ -104,39 +128,49 @@
         const resetFormErrorHideIcon = document.getElementById("resetfrom-password-error-hide");
         const resetHideIcon = document.getElementById("reset-password-hide-password");
         const resetErrorHideIcon = document.getElementById("reset-password-error-hide");
-        const errorMessage = document.getElementById("reset-password-error-message");
+        const passwordErrorMessage = document.getElementById("reset-resetPassword-error-message");
+        const resetPasswordErrorMessage = document.getElementById("reset-password-error-message");
     
-        let errors = [];
+        let passwordErrors = [];
+        let resetPasswordErrors = [];
     
         // Validate password field
         if (password.value.trim() === "" || password.value === null) {
-            errors.push("პაროლი *");
-            showResetPasswordErrors(password, resetFormPasswordLabel, errorMessage, "პაროლი *", resetFormHideIcon, resetFormErrorHideIcon);
+            passwordErrors.push("პაროლი");
+            showResetPasswordErrors(password, resetFormPasswordLabel, passwordErrorMessage, "პაროლი", resetFormHideIcon, resetFormErrorHideIcon);
         } else if (password.value.length < 8) {
-            errors.push("პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს *");
-            showResetPasswordErrors(password, resetFormPasswordLabel, errorMessage, "პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს *", resetFormHideIcon, resetFormErrorHideIcon);
+            passwordErrors.push("პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს");
+            showResetPasswordErrors(password, resetFormPasswordLabel, passwordErrorMessage, "პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს", resetFormHideIcon, resetFormErrorHideIcon);
         } else {
-            clearResetPasswordErrors(password, resetFormPasswordLabel, errorMessage, resetFormHideIcon, resetFormErrorHideIcon);
+            clearResetPasswordErrors(password, resetFormPasswordLabel, passwordErrorMessage, resetFormHideIcon, resetFormErrorHideIcon);
         }
     
         // Validate confirm password field
         if (resetPassword.value.trim() === "" || resetPassword.value === null) {
-            errors.push("გაიმეორეთ პაროლი *");
-            showResetPasswordErrors(resetPassword, resetPasswordLabel, errorMessage, "გაიმეორეთ პაროლი *", resetHideIcon, resetErrorHideIcon);
+            resetPasswordErrors.push("გაიმეორეთ პაროლი");
+            showResetPasswordErrors(resetPassword, resetPasswordLabel, resetPasswordErrorMessage, "გაიმეორეთ პაროლი", resetHideIcon, resetErrorHideIcon);
         } else if (password.value !== resetPassword.value) {
-            errors.push("პაროლი უნდა ემთხვეოდეს ერთმანეთს *");
-            showResetPasswordErrors(resetPassword, resetPasswordLabel, errorMessage, "პაროლი უნდა ემთხვეოდეს ერთმანეთს *", resetHideIcon, resetErrorHideIcon);
+            resetPasswordErrors.push("პაროლი უნდა ემთხვეოდეს ერთმანეთს");
+            showResetPasswordErrors(resetPassword, resetPasswordLabel, resetPasswordErrorMessage, "პაროლი უნდა ემთხვეოდეს ერთმანეთს", resetHideIcon, resetErrorHideIcon);
         } else {
-            clearResetPasswordErrors(resetPassword, resetPasswordLabel, errorMessage, resetHideIcon, resetErrorHideIcon);
+            clearResetPasswordErrors(resetPassword, resetPasswordLabel, resetPasswordErrorMessage, resetHideIcon, resetErrorHideIcon);
         }
     
         // Update error message box with all errors
-        if (errors.length > 0) {
-            errorMessage.innerHTML = errors.join("<br>");
-            errorMessage.classList.add("block");
+        if (passwordErrors.length > 0) {
+            passwordErrorMessage.innerHTML = passwordErrors.join("<br>");
+            passwordErrorMessage.classList.add("block");
         } else {
-            errorMessage.innerHTML = "";
-            errorMessage.classList.remove("block");
+            passwordErrorMessage.innerHTML = "";
+            passwordErrorMessage.classList.remove("block");
+        }
+
+        if (resetPasswordErrors.length > 0) {
+            resetPasswordErrorMessage.innerHTML = resetPasswordErrors.join("<br>");
+            resetPasswordErrorMessage.classList.add("block");
+        } else {
+            resetPasswordErrorMessage.innerHTML = "";
+            resetPasswordErrorMessage.classList.remove("block");
         }
     }
     
@@ -165,63 +199,80 @@
         const registrationFormErrorIcon = document.getElementById("registrationForm-password-error-hide")
         const registrationHideIcon = document.getElementById("registration-password-hide-password")
         const registrationErrorIcon = document.getElementById("registration-password-error-hide")
-        const errorMessage = document.getElementById("register-form-error-message")
 
-        let errors = [];
+        const nameErrorMessage = document.getElementById("register-form-name-error-message")
+        const surnameErrorMessage = document.getElementById("register-form-surname-error-message")
+        const emailErrorMessage = document.getElementById("register-form-email-error-message")
+        const passwordErrorMessage = document.getElementById("register-form-password-error-message")
+        const repeatPasswordErrorMessage = document.getElementById("register-form-reset-password-error-message")
+        let emailErrors = [];
+        let passwordErrors = [];
+        let repeatPasswordErrors = [];
 
-        if(name.value.trim() === "" || name.value === null){
-            showNameErrors(name, nameLabel, "სახელი *")
+        if(name.value.trim() === ""){
+            showNameErrors(name, nameLabel, nameErrorMessage, "შეიყვანეთ სახელი")
         }else{
-            clearNameErrors(name, nameLabel, "სახელი")
+            clearNameErrors(name, nameLabel, nameErrorMessage, "")
         }
 
-        if(surname.value.trim() === "" || surname.value === null){
-            showSurnameErrors(surname, surnameLabel, "გვარი *") 
-        }else{
-            clearSurnameErrors(surname, surnameLabel, "გვარი")
+        if(surname.value.trim() === ""){
+            showSurnameErrors(surname, surnameLabel, surnameErrorMessage, "შეიყვანეთ გვარი")
         }
 
-        if(email.value.trim() === "" || email.value === null){
-            errors.push("გთხოვთ შეიყვანოთ ელ ფოსტა *");
-            showEmailErrors(email, registrationFormEmailLabel, errorMessage, "ელ.ფოსტა *")
-        }else{
-            if(!isValidEmail(email.value)){
-                errors.push("გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
-                showEmailErrors(email, registrationFormEmailLabel, errorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა *");
-            }else{
-                clearEmailErrors(email, registrationFormEmailLabel, errorMessage, "ელ.ფოსტა")
-            }
+        if (email.value.trim() === "" || email.value === null) {
+            emailErrors.push("გთხოვთ შეიყვანოთ ელ ფოსტა");
+            showEmailErrors(email, registrationFormEmailLabel, emailErrorMessage, "გთხოვთ შეიყვანოთ ელ ფოსტა");
+        } else if (!isValidEmail(email.value)) {
+            emailErrors.push("გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
+            showEmailErrors(email, registrationFormEmailLabel, emailErrorMessage, "გთხოვთ შეიყვანოთ ვალიდური ელ ფოსტა");
+        } else {
+            clearEmailErrors(email, registrationFormEmailLabel, emailErrorMessage, "");
         }
-    
+
+        if (emailErrors.length > 0) {
+            emailErrorMessage.innerHTML = emailErrors.join("<br>");
+            emailErrorMessage.classList.add("block");
+        } else {
+            emailErrorMessage.innerHTML = "";
+            emailErrorMessage.classList.remove("block");
+        }
+
         // Validate password field
         if (password.value.trim() === "" || password.value === null) {
-            errors.push("პაროლი *");
-            showResetPasswordErrors(password, registrationFormPasswordLabel, errorMessage, "პაროლი *", registrationFormHideIcon, registrationFormErrorIcon);
+            passwordErrors.push("პაროლი");
+            showResetPasswordErrors(password, registrationFormPasswordLabel, passwordErrorMessage, "პაროლი", registrationFormHideIcon, registrationFormErrorIcon);
         } else if (password.value.length < 8) {
-            errors.push("პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს *");
-            showResetPasswordErrors(password, registrationFormPasswordLabel, errorMessage, "პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს *", registrationFormHideIcon, registrationFormErrorIcon);
+            passwordErrors.push("პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს");
+            showResetPasswordErrors(password, registrationFormPasswordLabel, passwordErrorMessage, "პაროლი მინიმუმ უნდა შეიცავდეს 8 სიმბოლოს", registrationFormHideIcon, registrationFormErrorIcon);
         } else {
-            clearResetPasswordErrors(password, registrationFormPasswordLabel, errorMessage, registrationFormHideIcon, registrationFormErrorIcon);
-        }
-    
-        // Validate confirm password field
-        if (repeatPassword.value.trim() === "" || repeatPassword.value === null) {
-            errors.push("გაიმეორეთ პაროლი *");
-            showResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, errorMessage, "გაიმეორეთ პაროლი *", registrationHideIcon, registrationErrorIcon);
-        } else if (password.value !== repeatPassword.value) {
-            errors.push("პაროლი უნდა ემთხვეოდეს ერთმანეთს *");
-            showResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, errorMessage, "პაროლი უნდა ემთხვეოდეს ერთმანეთს *", registrationHideIcon, registrationErrorIcon);
-        } else {
-            clearResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, errorMessage, registrationHideIcon, registrationErrorIcon);
+            clearResetPasswordErrors(password, registrationFormPasswordLabel, passwordErrorMessage, registrationFormHideIcon, registrationFormErrorIcon);
         }
     
         // Update error message box with all errors
-        if (errors.length > 0) {
-            errorMessage.innerHTML = errors.join("<br>");
-            errorMessage.classList.add("block");
+        if (passwordErrors.length > 0) {
+            passwordErrorMessage.innerHTML = passwordErrors.join("<br>");
+            passwordErrorMessage.classList.add("block");
         } else {
-            errorMessage.innerHTML = "";
-            errorMessage.classList.remove("block");
+            passwordErrorMessage.innerHTML = "";
+            passwordErrorMessage.classList.remove("block");
+        }
+
+        if (repeatPassword.value.trim() === "" || repeatPassword.value === null) {
+            repeatPasswordErrors.push("გაიმეორეთ პაროლი");
+            showResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, repeatPasswordErrorMessage, "გაიმეორეთ პაროლი", registrationHideIcon, registrationErrorIcon);
+        } else if (password.value !== repeatPassword.value) {
+            repeatPasswordErrors.push("პაროლი უნდა ემთხვეოდეს ერთმანეთს");
+            showResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, repeatPasswordErrorMessage, "პაროლი უნდა ემთხვეოდეს ერთმანეთს", registrationHideIcon, registrationErrorIcon);
+        } else {
+            clearResetPasswordErrors(repeatPassword, registrationFormRepeatPasswordLabel, repeatPasswordErrorMessage, registrationHideIcon, registrationErrorIcon);
+        }
+
+        if (repeatPasswordErrors.length > 0) {
+            repeatPasswordErrorMessage.innerHTML = repeatPasswordErrors.join("<br>");
+            repeatPasswordErrorMessage.classList.add("block");
+        } else {
+            repeatPasswordErrorMessage.innerHTML = "";
+            repeatPasswordErrorMessage.classList.remove("block");
         }
 
         const successBox = document.getElementById("success-box")
@@ -355,21 +406,31 @@ function clearResetPasswordErrors(password, label, errorMessage, icon, errorIcon
 }
     
 
-    function showNameErrors(name, label, textContent){
-        name.classList.add("error")
-        label.classList.add("error-text")
+    function showNameErrors(name, label, error, textContent){
+        name.classList.add("error");
+        label.classList.add("error-text");
+        error.classList.add("block");
+        error.classList.add("error-text");
+        error.innerHTML = textContent
     }
-    function clearNameErrors(name, label, textContent){
+    function clearNameErrors(name, label, error, textContent){
         name.classList.remove("error")
         label.classList.remove("error-text")
+        error.classList.remove("block")
+        error.innerHTML = textContent
     }
-    function showSurnameErrors(surname, label, textContent){
-        surname.classList.add("error")
-        label.classList.add("error-text")
+    function showSurnameErrors(surname, label, error, textContent){
+        surname.classList.add("error");
+        label.classList.add("error-text");
+        error.classList.add("block");
+        error.classList.add("error-text");
+        error.innerHTML = textContent
     }
     function clearSurnameErrors(surname, label, textContent){
         surname.classList.remove("error")
         label.classList.remove("error-text")
+        error.classList.remove("block")
+        error.innerHTML = textContent
     }
     function isValidEmail(email) {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -401,9 +462,13 @@ function clearResetPasswordErrors(password, label, errorMessage, icon, errorIcon
 
         const backImg = document.getElementById("back")
         if(backImg){
-            backImg.style.display = "none"
+            backImg.classList.remove("block")
         }
     }
+    const forgetLink = document.getElementById("forget")
+    forgetLink.addEventListener("click", () => {
+        clearAllErrors();
+    })
     
     document.querySelectorAll("button").forEach(button => {
         button.addEventListener("click", () => {

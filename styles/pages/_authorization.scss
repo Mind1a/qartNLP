@@ -112,7 +112,9 @@
                 max-width: 340px;
                 .error-message{
                     display: none;
-                    margin-bottom: 25px;
+                    margin-top: -15px;
+                    margin-bottom: 20px;
+                    font-size: 14px;
                 }
                 .error-text{
                     color: $error-color;

@@ -13,9 +13,9 @@
         <div class="form-container sign-in" id="sign-in">
             <form id="authorization-form" novalidate>
                 <h2>ავტორიზაცია</h2>
-                <p class="error-message" id="error-message"></p>
                 <label for="email-input" id="email-label">ელ.ფოსტა</label>
                 <input type="email" id="email-input" name="email">
+                <p class="error-message" id="email-error-message"></p>
                 <label for="password-input" id="password-label">პაროლი</label>
                 <div class="password" id="password-input-id">
                     <input type="password" id="password-input" name="password">
@@ -24,6 +24,7 @@
                     <img src="../assets/svg/hide.svg" id="hide-password" class="password-icon">
                     <img src="../assets/svg/errorhide.svg" id="error-hide" class="password-error-icon">
                 </div>
+                <p class="error-message" id="password-error-message"></p>
                 <span class="forget" id="forget"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
                 <button type="submit">ავტორიზაცია</button>
                 <button class="google"><img src="../assets/svg/google-logo.svg">Sign in with Google</button>
@@ -35,9 +36,9 @@
             <div class="form-container sign-in">
                 <form id="forgetpassword-form" novalidate>
                     <h2>დაგავიწყდა პაროლი?</h2>
-                    <p class="error-message" id="forget-password-error-message"></p>
-                    <label for="forget-password-email-label" id="forget-password-email-label">ელ.ფოსტა</label>
+                    <label for="forget-password-email-label" id="forget-password-email-label">ელ.ფოსტა *</label>
                     <input type="email" id="forget-password-email-input">
+                    <p class="error-message" id="forget-password-error-message"></p>
                     <button type="submit" id="check">პაროლის აღდგენა</button>
                 </form>
             </div>
@@ -47,19 +48,20 @@
             <div class="form-container sign-in" id="resolve">
                 <form id="resetpassword-form" novalidate>
                     <h2>პაროლის აღდგენა</h2>
-                    <p class="error-message" id="reset-password-error-message"></p>
-                    <label for="resetform-password-input" id="resetform-password-label">ახალი პაროლი</label>
+                    <label for="resetform-password-input" id="resetform-password-label">ახალი პაროლი *</label>
                     <div class="password">
                         <input type="password" id="resetform-password-input">
                         <img src="../assets/svg/hide.svg" id="resetform-password-hide-password" class="password-icon">
                         <img src="../assets/svg/errorhide.svg" id="resetfrom-password-error-hide" class="password-error-icon">
                     </div>
-                    <label for="reset-password-input" id="reset-password-label">გაიმეორეთ პაროლი</label>
+                    <p class="error-message" id="reset-resetPassword-error-message"></p>
+                    <label for="reset-password-input" id="reset-password-label">გაიმეორეთ პაროლი *</label>
                     <div class="password">
                         <input type="password" id="reset-password-input">
                         <img src="../assets/svg/hide.svg" id="reset-password-hide-password" class="password-icon">
                         <img src="../assets/svg/errorhide.svg" id="reset-password-error-hide" class="password-error-icon">
                     </div>
+                    <p class="error-message" id="reset-password-error-message"></p>
                     <button type="submit" id="save">შენახვა</button>
                 </form>
             </div>
@@ -68,31 +70,36 @@
         <div class="form-container sign-up">
             <form id="register-form" novalidate>
                 <h2>რეგისტრაცია</h2>
-                <p class="error-message" id="register-form-error-message"></p>
+                <!-- <p class="error-message" id="register-form-error-message"></p> -->
                 <div class="person">
                     <div>
-                        <label for="name-input" id="name-label">სახელი</label>
+                        <label for="name-input" id="name-label">სახელი *</label>
                         <input type="text" id="name-input" name="name">
+                        <p class="error-message" id="register-form-name-error-message"></p>
                     </div>
                     <div>
-                        <label for="surname-input" id="surname-label">გვარი</label>
+                        <label for="surname-input" id="surname-label">გვარი *</label>
                         <input type="text" id="surname-input" name="surname">
+                        <p class="error-message" id="register-form-surname-error-message"></p>
                     </div>
                 </div>
-                <label for="registration-email-input" id="registration-email-label">ელ.ფოსტა</label>
+                <label for="registration-email-input" id="registration-email-label">ელ.ფოსტა *</label>
                 <input type="email" id="registration-email-input" name="email">
-                <label for="registration-password-input" id="registration-password-label">პაროლი</label>
+                <p class="error-message" id="register-form-email-error-message"></p>
+                <label for="registration-password-input" id="registration-password-label">პაროლი *</label>
                 <div class="password">
                     <input type="password" id="registration-password-input" name="password">
                     <img src="../assets/svg/hide.svg" id="registrationForm-password-hide-password" class="password-icon">
                     <img src="../assets/svg/errorhide.svg" id="registrationForm-password-error-hide" class="password-error-icon">
                 </div>
-                <label for="repeat-password-input" id="repeat-password-label">გაიმეორეთ პაროლი</label>
+                <p class="error-message" id="register-form-password-error-message"></p>
+                <label for="repeat-password-input" id="repeat-password-label">გაიმეორეთ პაროლი *</label>
                 <div class="password">
                     <input type="password" id="repeat-password-input">
                     <img src="../assets/svg/hide.svg" id="registration-password-hide-password" class="password-icon">
                     <img src="../assets/svg/errorhide.svg" id="registration-password-error-hide" class="password-error-icon">
                 </div>
+                <p class="error-message" id="register-form-reset-password-error-message"></p>
                 <div class="agreement">
                     <img src="../assets/svg/success.svg" class="success-box box" id="success-box">
                     <img src="../assets/svg/box.svg" class="box" id="box">
@@ -119,6 +126,6 @@
     </div>
     
     <script src="../js/authorization.js"></script>
-    <script src="../js/validation.js"></script>
+    <script src="../js/authorizationValidation.js"></script>
 </body>
 </html>

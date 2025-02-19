@@ -726,7 +726,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form .error-message {
   display: none;
-  margin-bottom: 25px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 .body .container .form-container form .error-text {
   color: #E73B37;
