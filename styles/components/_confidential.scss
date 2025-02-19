@@ -1,0 +1,48 @@
+.confidential-policy-body{
+
+    .confidential-policy-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 0 150px;
+        h2{
+            font-family: 'Noto Sans Georgian', sans-serif;
+            font-size: 28px;
+            line-height: 38.08px;
+            color: #496AC1;
+            font-weight: 800;
+            margin-bottom: 34px;
+            max-width: 1180px;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+            color: #2C2C2C99;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.6px;
+        }
+        .top-text-section, .bottom-text-section{
+            display: flex;
+            flex-direction: column;
+            max-width: 1180px;
+            text-align: justify;
+
+            .split{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+            }
+            .rule-split{
+                line-height: 28px;
+            }
+            .text1{
+                margin-bottom: 25px;
+            }
+            .text2{
+                margin-bottom: 26px;
+            }
+        }
+    }
+}
