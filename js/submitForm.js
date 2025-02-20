@@ -8,20 +8,16 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (validateUsername(username.value) === false) {
-    console.log("enter a valid username");
     emptyInputValidation(username, true);
   }
-  
-  if (validateEmail(email.value) === false) {
-    console.log("enter a valid email adress");
-    emptyInputValidation(email, true);
-  } 
-  
-  if (validateMessage(message.value) === false) {
-    console.log("enter a message");
-    emptyInputValidation(message, true);
-  } 
 
+  if (validateEmail(email.value) === false) {
+    emptyInputValidation(email, true);
+  }
+
+  if (validateMessage(message.value) === false) {
+    emptyInputValidation(message, true);
+  }
 });
 
 username.addEventListener("input", () => detectInput(username));
@@ -41,7 +37,7 @@ function emptyInputValidation(input, isInvalid = false) {
 }
 
 function detectInput(input) {
-    emptyInputValidation(input);
+  emptyInputValidation(input);
 }
 
 function validateUsername(username) {
@@ -50,7 +46,8 @@ function validateUsername(username) {
 }
 
 function validateEmail(email) {
-  const pattern = /^(?!.*\.\.)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]{1,64}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i;
+  const pattern =
+    /^(?!.*\.\.)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]{1,64}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i;
   return pattern.test(email);
 }
 

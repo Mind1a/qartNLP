@@ -510,7 +510,7 @@ body main .section_1_content p {
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
-  color: #E6E6E6;
+  color: #e6e6e6;
 }
 body main .section_1_content .buttons {
   display: flex;
@@ -1086,10 +1086,14 @@ main .aboutProject .contact-info form .form-layout .username-mail {
   gap: 20px;
   margin-bottom: 24px;
 }
-main .aboutProject .contact-info form .form-layout .username-mail .username label, main .aboutProject .contact-info form .form-layout .username-mail .username input, main .aboutProject .contact-info form .form-layout .username-mail .email label, main .aboutProject .contact-info form .form-layout .username-mail .email input {
+main .aboutProject .contact-info form .form-layout .username-mail .username label,
+main .aboutProject .contact-info form .form-layout .username-mail .username input,
+main .aboutProject .contact-info form .form-layout .username-mail .email label,
+main .aboutProject .contact-info form .form-layout .username-mail .email input {
   display: block;
 }
-main .aboutProject .contact-info form .form-layout .username-mail .username input, main .aboutProject .contact-info form .form-layout .username-mail .email input {
+main .aboutProject .contact-info form .form-layout .username-mail .username input,
+main .aboutProject .contact-info form .form-layout .username-mail .email input {
   width: 580px;
   height: 50px;
   border-radius: 8px;
@@ -1099,13 +1103,15 @@ main .aboutProject .contact-info form .form-layout .username-mail .username inpu
   font-size: 18px;
   padding: 0 8px;
 }
-main .aboutProject .contact-info form .form-layout .username-mail .username input.emptyInput, main .aboutProject .contact-info form .form-layout .username-mail .email input.emptyInput {
+main .aboutProject .contact-info form .form-layout .username-mail .username input.emptyInput,
+main .aboutProject .contact-info form .form-layout .username-mail .email input.emptyInput {
   border-color: #E73B37;
 }
 main .aboutProject .contact-info form .form-layout .message {
   border-radius: 8px;
 }
-main .aboutProject .contact-info form .form-layout .message label, main .aboutProject .contact-info form .form-layout .message textarea {
+main .aboutProject .contact-info form .form-layout .message label,
+main .aboutProject .contact-info form .form-layout .message textarea {
   display: block;
 }
 main .aboutProject .contact-info form .form-layout .message textarea {

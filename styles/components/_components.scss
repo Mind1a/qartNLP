@@ -3,15 +3,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'FiraGO', sans-serif;
+  font-family: "FiraGO", sans-serif;
 
   main {
     flex: 1;
     @include container;
-    
-    // .container {
-    //   @include container;
-    // }
 
     .section_1_content {
       @include flex(center, center);
@@ -39,7 +35,7 @@ body {
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
-        color: #E6E6E6;
+        color: #e6e6e6;
       }
 
       .buttons {
@@ -113,7 +109,7 @@ body {
           border-radius: 20px;
           text-align: center;
 
-          img{
+          img {
             width: 100%;
             padding: 40px 40px 24px;
           }
@@ -145,7 +141,7 @@ body {
           .see_more {
             border: 1px solid $header-bg-color;
             padding: 10px 30px;
-            border-radius: 8px; 
+            border-radius: 8px;
             margin-top: 24px;
             cursor: pointer;
             transition: background-color 0.3s ease;
