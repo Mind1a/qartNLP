@@ -1025,6 +1025,7 @@ main .aboutProject .worked-on-project .members-grid {
   gap: 20px;
 }
 main .aboutProject .worked-on-project .members-grid .member-info {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1067,7 +1068,6 @@ main .aboutProject .contact-info .adress-number a {
   width: fit-content;
   margin: 0 auto;
   font-size: 18px;
-  font-weight: 350;
 }
 main .aboutProject .contact-info form .form-layout {
   display: flex;

@@ -29,6 +29,7 @@ main {
         gap: 20px;
 
         .member-info {
+          background-color: $white;
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -75,7 +76,6 @@ main {
           width: fit-content;
           margin: 0 auto;
           font-size: 18px;
-          font-weight: 350;
         }
       }
 
