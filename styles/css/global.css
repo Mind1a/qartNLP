@@ -1125,8 +1125,7 @@ main .aboutProject .contact-info form .form-layout .message textarea.emptyInput 
 main .aboutProject .contact-info form .form-layout button {
   align-self: center;
   border: 2px solid #496ac1;
-  width: 380px;
-  height: 54px;
+  padding: 17.5px 154.5px;
   border-radius: 8px;
   margin: 0 auto;
   background-color: inherit;
@@ -1134,14 +1133,9 @@ main .aboutProject .contact-info form .form-layout button {
   color: #496ac1;
   font-family: "FiraGo", sans-serif;
   font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-main .aboutProject .contact-info form .form-layout button p {
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 main .aboutProject .contact-info form .form-layout button:hover {
   background-color: #496ac1;
-}
-main .aboutProject .contact-info form .form-layout button:hover p {
   color: #ffffff;
 }/*# sourceMappingURL=global.css.map */
