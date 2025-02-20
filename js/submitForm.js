@@ -6,7 +6,6 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  // console.log("form submission prevented!");
 
   if (validateUsername(username.value) === false) {
     console.log("enter a valid username");
@@ -46,12 +45,12 @@ function detectInput(input) {
 }
 
 function validateUsername(username) {
-  const pattern = /^[a-z][\w._-]{3,16}$/i;
+  const pattern = /^[a-z][\w._-]{1,16}$/i;
   return pattern.test(username);
 }
 
 function validateEmail(email) {
-  const pattern = /^[\w][\w._-]{5,24}@[\w.-]+\.[a-z]{2,4}$/i;
+  const pattern = /^(?!.*\.\.)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]{1,64}@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i;
   return pattern.test(email);
 }
 
@@ -59,7 +58,3 @@ function validateMessage(message) {
   const pattern = /^[\w\s.,!?'-]{5,500}$/i;
   return pattern.test(message);
 }
-
-// console.log(validateUsername("nino1"))
-// console.log(validateEmail("NINO.g@gmd.COM"))
-// console.log(validateMessage("eslfkn"))
