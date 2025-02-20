@@ -61,3 +61,11 @@ $pc-max: $pc - 1;
 //   font-weight: $fw;
 //   line-height: normal;
 // }
+
+
+@mixin purpleTitle(){
+  font-size: 28px;
+  font-weight: bold;
+  color: $header-bg-color;
+  text-align: center;
+}
