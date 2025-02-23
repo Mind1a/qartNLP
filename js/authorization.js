@@ -87,6 +87,72 @@ successBox.addEventListener("click", function () {
 
 
 
+const passwordToggles = [
+    { id: 1, hide: "hide-password", show: "show", input: "password-input" },
+    { id: 2, hide: "error-hide", show: "show-error", input: "password-input" },
+    { id: 3, hide: "resetform-password-hide-password", show: "resetfrom-password-error-hide", input: "resetform-password-input" },
+    { id: 4, hide: "reset-password-hide-password", show: "reset-password-error-hide", input: "reset-password-input" },
+    { id: 5, hide: "registrationForm-password-hide-password", show: "registrationForm-password-error-hide", input: "registration-password-input" },
+    { id: 6, hide: "registration-password-hide-password", show: "registration-password-error-hide", input: "repeat-password-input" }
+];
+
+function togglePassword(passwordField, hideIcon, showIcon) {
+    const isHidden = passwordField.type === "password";
+    passwordField.type = isHidden ? "text" : "password";
+    
+    if(passwordField.type === "text"){
+        hideIcon.classList.add("none")
+        showIcon.classList.add("block")
+    }else{
+        hideIcon.classList.remove("none")
+        showIcon.classList.remove("block")
+    }
+}
+
+function passwordToggle(id){
+    const item = passwordToggles.find(el => el.id === id);
+    if(!item) return;
+
+    const hideIcon = document.getElementById(item.hide);
+    const showIcon = document.getElementById(item.show);
+    const passwordField = document.getElementById(item.input);
+
+    if (hideIcon && showIcon && passwordField) {
+        hideIcon.addEventListener("click", () => togglePassword(passwordField, hideIcon, showIcon));
+        showIcon.addEventListener("click", () => togglePassword(passwordField, hideIcon, showIcon));
+    }
+
+}
+
+function resetDefaults() {
+    passwordToggles.forEach(item => {
+        const hideIcon = document.getElementById(item.hide);
+        const showIcon = document.getElementById(item.show);
+        const passwordField = document.getElementById(item.input);
+
+        if (hideIcon && showIcon && passwordField) {
+            passwordField.type = "password";
+            hideIcon.classList.remove("none");
+            showIcon.classList.remove("block");
+        }
+    });
+}
+
+passwordToggle(1)
+passwordToggle(2)
+passwordToggle(3)
+passwordToggle(4)
+passwordToggle(5)
+passwordToggle(6)
+
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+        resetDefaults();
+    });
+})
+
+
+
 // forms variables
 const authorizationForm = document.getElementById("authorization-form")
 const registrationForm = document.getElementById("register-form")
