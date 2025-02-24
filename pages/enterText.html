@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/css/global.css">
+    <link rel="stylesheet" href="../styles/css/global.css" />
   </head>
   <body>
     <header>
       <div class="header_wrapper">
         <div class="container">
-                <!-- logo -->
+          <!-- logo -->
           <div class="logo">
-              <a href="../index.html"
-                ><img src="../assets/svg/logo.svg" alt="logo"
-                  /></a>
+            <a href="../index.html"
+              ><img src="../assets/svg/logo.svg" alt="logo"
+            /></a>
           </div>
-      
+
           <!-- navigation -->
           <div class="navigation">
             <nav>
               <ul>
                 <li><a href="#">ჩვენ შესახებ</a></li>
                 <li><a href="./authorization.html">ავტორიზაცია</a></li>
-      
-                  <!-- Toggle language button -->
+
+                <!-- Toggle language button -->
                 <div class="toggle-language">
                   <input
                     type="checkbox"
@@ -43,49 +43,55 @@
         </div>
       </div>
     </header>
-        <main>
-            <section class="container">
-                <div class="hero-section" >
-                    <div class="label-box">
-                        <label>შეიყვანეთ ტექსი</label>
-                        <span class="wordsAmount">7/250</span>
-                    </div>
-                    <form  class="form-container">
-                        <textarea class="enterText"  minlength="7" maxlength="250" name="enterText" placeholder="ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების"></textarea>    
-                        <div class="btn-container">
-                            <input class="btn" type="reset" value="გაასუფთავე"/>
-                            <input class="btn" type="submit"  value="გაანალიზე"/>
-                        </div>
-                    </form>
-                    
-                </div>
-            </section>
-
-            <footer>
-                <div class="footer-wrapper">
-                  <div class="privacy">
-                    <a href="#">კონფიდენციალურობის პოლიტიკა</a>
-                    <a href="#">გამოყენების წესები</a>
-                  </div>
-                  <div class="logo-wrapper">
-                    <a href="https://unilab.iliauni.edu.ge/">
-                      <img
-                        class="unilab"
-                        src="../assets/svg/unilab-logo.svg"
-                        alt="unilab logo"
-                      />
-                    </a>
-                    <a href="https://iliauni.edu.ge/">
-                      <img
-                        class="iliauni"
-                        src="../assets/svg/iliauni-logo.svg"
-                        alt="iliauni logo"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </footer>
-        </main>
-        <script src="../js/lamatizationValidation.js"></script>
+    <main>
+      <section class="container">
+        <div class="hero-section-enterText">
+          <div class="label-box">
+            <label>შეიყვანეთ ტექსი</label>
+            <div class="words-Amount-Box">
+              <span class="wordsAmount">7/250</span>
+            </div>
+          </div>
+          <form class="form-container">
+            <textarea
+              class="enterText"
+              minlength="7"
+              maxlength="250"
+              name="enterText"
+              placeholder="ჭკუა უხმარ არს ბრიყვთათვის, ჭკუა ცოდნით მოიხმარების"
+            ></textarea>
+            <div class="btn-container">
+              <input class="btn" type="reset" value="გაასუფთავე" />
+              <input class="btn" type="submit" value="გაანალიზე" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="privacy">
+          <a href="#">კონფიდენციალურობის პოლიტიკა</a>
+          <a href="#">გამოყენების წესები</a>
+        </div>
+        <div class="logo-wrapper">
+          <a href="https://unilab.iliauni.edu.ge/">
+            <img
+              class="unilab"
+              src="../assets/svg/unilab-logo.svg"
+              alt="unilab logo"
+            />
+          </a>
+          <a href="https://iliauni.edu.ge/">
+            <img
+              class="iliauni"
+              src="../assets/svg/iliauni-logo.svg"
+              alt="iliauni logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/lamatizationValidation.js"></script>
   </body>
 </html>
