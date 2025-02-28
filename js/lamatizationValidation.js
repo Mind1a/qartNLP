@@ -3,7 +3,7 @@ const formContainer = document.querySelector(".form-container");
 const AmountWords = document.querySelector(".wordsAmount");
 const wordsAmountBox = document.querySelector(".words-Amount-Box");
 
-const validWordsNumber = (inputs) => inputs.trim().split(" ").length;
+const validWordsNumber = (inputs) => inputs.trim().split("").length;
 
 const requiredInput = (input) => input.trim() !== "";
 
