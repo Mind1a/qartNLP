@@ -7,8 +7,9 @@ body {
 
   main {
     flex: 1;
-    @include container;
-    
+    .container {
+      @include container;
+    }
     .section_1_content {
       @include flex(center, center);
       flex-direction: column;
