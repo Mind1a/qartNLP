@@ -627,7 +627,8 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 .body * {
   margin: 0;
@@ -638,12 +639,28 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   width: 1180px;
   max-width: 1180px;
   height: 100vh;
+  min-height: 700px;
   background-color: #ffffff;
   position: relative;
-  overflow: hidden;
   box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.1), 0px 130px 130px rgba(0, 0, 0, 0.09), 0px 292px 175px rgba(0, 0, 0, 0.05), 0px 519px 208px rgba(0, 0, 0, 0.01), 0px 811px 227px rgba(0, 0, 0, 0);
 }
+.body .container > div {
+  height: 100vh;
+}
+.body .container #show {
+  display: none;
+}
+.body .container #show-error {
+  display: none;
+}
+.body .container .resolve-password {
+  display: none;
+}
+.body .container .forget-password {
+  display: none;
+}
 .body .container .forget-password img {
+  display: none;
   position: absolute;
   top: 54px;
   left: 40px;
@@ -651,7 +668,11 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   cursor: pointer;
 }
 .body .container span {
-  font-size: 16px;
+  line-height: 19.2px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+.body .container label {
   line-height: 19.2px;
   color: #2c2c2c;
   margin-bottom: 8px;
@@ -689,9 +710,11 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 .body .container .form-container {
   position: absolute;
   top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
@@ -703,15 +726,19 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  width: 340px;
   max-width: 340px;
+}
+.body .container .form-container form .error-message {
+  display: none;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 .body .container .form-container form .error-text {
   color: #E73B37;
 }
 .body .container .form-container form .error {
   border: 1px solid #E73B37;
-  color: #E73B37;
 }
 .body .container .form-container form input {
   border: 1px solid #496ac1;
@@ -722,9 +749,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   font-size: 16px;
   padding: 12px;
   margin-bottom: 20px;
-}
-.body .container .form-container form input:hover {
-  border: 1px solid #2c2c2c;
 }
 .body .container .form-container form input:focus {
   border: 1px solid #2c2c2c;
@@ -752,7 +776,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .container .form-container form button {
   width: 340px;
-  height: 40px;
+  min-height: 40px;
   border-radius: 6px;
   margin-bottom: 20px;
   background-color: #496ac1;
@@ -800,6 +824,19 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   right: 12px;
   cursor: pointer;
 }
+.body .container .form-container form .password #error-hide {
+  display: none;
+}
+.body .container .form-container form .password #hide-password {
+  display: block;
+}
+.body .sign-in {
+  z-index: 2;
+}
+.body .sign-up {
+  opacity: 0;
+  z-index: 1;
+}
 .body .container.active .sign-in {
   transform: translateX(100%);
   opacity: 0;
@@ -827,6 +864,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   left: 50%;
   width: 50%;
   height: 100%;
+  min-height: 700px;
   overflow: hidden;
   transition: all 0.6s ease-in-out;
   z-index: 1000;
@@ -838,18 +876,17 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   height: 100%;
   background-color: #496ac1;
   color: #ffffff;
-  position: relative;
+  position: absolute;
   left: -100%;
   height: 100%;
   width: 200%;
-  transform: translateX(0);
   transition: all 0.6s ease-in-out;
+  display: flex;
 }
 .body .container.active .toggle {
   transform: translateX(50%);
 }
 .body .toggle-panel {
-  position: absolute;
   width: 50%;
   height: 100%;
   display: flex;
@@ -872,7 +909,6 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   transform: translateX(0);
 }
 .body .toggle-right {
-  right: 0;
   transform: translateX(0);
 }
 .body .toggle-right button {
@@ -888,7 +924,7 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
-  height: 40px;
+  min-height: 40px;
   border-radius: 6px;
   font-size: 16px;
   line-height: 19.2px;
@@ -897,6 +933,9 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 }
 .body .toggle img {
   width: 235px;
+}
+.body #authoritation {
+  display: none;
 }
 .body .container .form-container .agreement {
   display: flex;
@@ -911,6 +950,21 @@ body main .opportunities_section .blocks .block .see_more:hover a {
 .body .container .form-container .agreement .agree {
   font-size: 14px;
   color: #496ac1;
+}
+.body .container .form-container .agreement .agree-error {
+  color: #E73B37;
+}
+
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.flex {
+  display: flex !important;
 }
 
 body .main-sucess {
