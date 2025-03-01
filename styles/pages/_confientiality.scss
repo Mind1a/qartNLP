@@ -1,0 +1,37 @@
+body {
+  background-color: $body-bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+    padding: 0 50px;
+
+    .hero-section-confidentiality-rules {
+      margin: 80px 0 150px;
+
+      h2 {
+        font-family: "FiraGO", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: $header-bg-color;
+        margin-bottom: 38px;
+        letter-spacing: 0.75px;
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          font-family: "FiraGO", sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          color: $button-text-color;
+          /*margin-bottom: 20px;*/
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
