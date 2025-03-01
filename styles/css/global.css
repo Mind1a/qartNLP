@@ -1094,11 +1094,13 @@ body main .hero-section-enterText .btn-container :nth-child(2) {
 body main .hero-section-enterText .btn-container .btn-analize:hover,
 body main .hero-section-enterText .btn-container .btn-analize:active {
   cursor: pointer;
-  background-color: #496ac1 50;
+  background-color: #496ac1;
 }
 body main .hero-section-enterText .btn-container .btn-clear:hover,
 body main .hero-section-enterText .btn-container .btn-clear:active {
-  color: #496ac1 50;
+  color: #496ac1;
+  background-color: #496ac1;
+  cursor: pointer;
 }
 body main .is-valid {
   border: 2.5px solid green;
