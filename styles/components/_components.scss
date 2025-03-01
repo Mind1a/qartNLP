@@ -7,11 +7,9 @@ body {
 
   main {
     flex: 1;
-
     .container {
       @include container;
     }
-
     .section_1_content {
       @include flex(center, center);
       flex-direction: column;
@@ -23,8 +21,8 @@ body {
       background-position: center;
       height: 531px;
       margin-top: 80px;
-      max-width: 1180px;
-      max-width: 91%;
+      // max-width: 1180px;
+      // max-width: 91%;
 
       h2 {
         font-size: 48px;
@@ -89,7 +87,7 @@ body {
 
     .opportunities_section {
       margin-top: 80px;
-      margin-bottom: 368px;
+      margin-bottom: 150px;
 
       h3 {
         font-size: 28px;

@@ -328,6 +328,12 @@ button {
   font-weight: 100;
   font-style: normal;
 }
+@font-face {
+  font-family: "NotoSansGeorgianRegular";
+  src: url("../../assets/Fonts/Noto_Sans_Georgian/NotoSansGeorgian-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
 body header {
   font-family: "Firago", sans-serif;
 }
@@ -475,8 +481,6 @@ body {
 }
 body main {
   flex: 1;
-}
-body main .container {
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
@@ -494,8 +498,6 @@ body main .section_1_content {
   background-position: center;
   height: 531px;
   margin-top: 80px;
-  max-width: 1180px;
-  max-width: 91%;
 }
 body main .section_1_content h2 {
   font-size: 48px;
@@ -549,7 +551,7 @@ body main .section_1_content .buttons div:hover a {
 }
 body main .opportunities_section {
   margin-top: 80px;
-  margin-bottom: 368px;
+  margin-bottom: 150px;
 }
 body main .opportunities_section h3 {
   font-size: 28px;
@@ -1107,4 +1109,3 @@ body main .is-valid {
 }
 body main .not-valid {
   border: 2.5px solid red;
-}/*# sourceMappingURL=global.css.map */
