@@ -1144,19 +1144,24 @@ body main .hero-section-enterText .btn-container input {
   font-size: 16px;
   font-weight: 500;
   color: #496ac1;
+  transition: background-color 0.3s ease;
+}
+body main .hero-section-enterText .btn-container input:disabled {
+  opacity: 0.5;
 }
 body main .hero-section-enterText .btn-container :nth-child(2) {
   background-color: #496ac1;
   color: #ffffff;
 }
-body main .hero-section-enterText .btn-container .btn-analize:hover,
-body main .hero-section-enterText .btn-container .btn-analize:active {
+body main .hero-section-enterText .btn-container .btn-analize:not(:disabled):hover,
+body main .hero-section-enterText .btn-container .btn-analize:not(:disabled):active {
   cursor: pointer;
   background-color: #496ac1;
 }
-body main .hero-section-enterText .btn-container .btn-clear:hover,
-body main .hero-section-enterText .btn-container .btn-clear:active {
+body main .hero-section-enterText .btn-container .btn-clear:not(:disabled):hover,
+body main .hero-section-enterText .btn-container .btn-clear:not(:disabled):active {
   color: #496ac1;
+  color: #fff;
   background-color: #496ac1;
   cursor: pointer;
 }
@@ -1168,7 +1173,10 @@ body main .not-valid {
 }
 
 main .aboutProject {
-  margin: 80px 0 150px;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 80px auto;
 }
 main .aboutProject .introduction h2 {
   font-size: 28px;

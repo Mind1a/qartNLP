@@ -60,19 +60,26 @@ body {
           font-size: 16px;
           font-weight: 500;
           color: $header-bg-color;
+
+          transition: background-color 0.3s ease;
+
+          &:disabled {
+            opacity: 0.5;
+          }
         }
         :nth-child(2) {
           background-color: $header-bg-color;
           color: $white;
         }
-        .btn-analize:hover,
-        .btn-analize:active {
+        .btn-analize:not(:disabled):hover,
+        .btn-analize:not(:disabled):active {
           cursor: pointer;
           background-color: $header-bg-color;
         }
-        .btn-clear:hover,
-        .btn-clear:active {
+        .btn-clear:not(:disabled):hover,
+        .btn-clear:not(:disabled):active {
           color: $header-bg-color;
+          color: #fff;
           background-color: $header-bg-color;
           cursor: pointer;
         }
