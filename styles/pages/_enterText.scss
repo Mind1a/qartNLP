@@ -7,8 +7,60 @@ body {
   main {
     flex: 1;
 
+    .container {
+      margin-bottom: 150px;
+    }
+    dialog {
+      margin: auto;
+      padding: 2rem;
+      border: none;
+      border-radius: 6px;
+      opacity: 0;
+      transition: all 0.3s allow-discrete;
+
+      position: relative;
+    }
+
+    dialog[open] {
+      opacity: 1;
+    }
+
+    @starting-style {
+      dialog[open] {
+        opacity: 0;
+      }
+    }
+
+    dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0);
+      transition: all 0.3s allow-discrete;
+    }
+
+    dialog[open]::backdrop {
+      background-color: rgba(209, 209, 209, 0.281);
+    }
+
+    @starting-style {
+      dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .description {
+      max-width: 40ch;
+      margin: 1rem 0;
+    }
+
     .hero-section-enterText {
-      margin: 80px 0 150px;
+      margin: 80px auto 26px 0;
 
       .label-box {
         display: flex;
@@ -27,6 +79,10 @@ body {
           font-size: 16px;
           color: $button-text-color;
           margin: 0 10px 10px 0;
+
+          &.num-not-valid {
+            color: #e73b37;
+          }
         }
       }
       .form-container {
@@ -90,7 +146,41 @@ body {
       border: 2.5px solid green;
     }
     .not-valid {
-      border: 2.5px solid red;
+      border: 2.5px solid red !important;
+    }
+
+    .search-results {
+      &.disable {
+        display: none;
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 16px;
+
+      margin-bottom: 60px;
+
+      article {
+        color: $button-text-color;
+        background-color: #eae9e9;
+        padding: 20px 50px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h4 {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
     }
   }
 }

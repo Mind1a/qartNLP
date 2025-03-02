@@ -13,7 +13,6 @@ clearBtn.disabled = true;
 submitBtn.disabled = true;
 
 enterText.addEventListener("input", function (e) {
-  e.preventDefault();
   clearBtn.disabled = !requiredInput(enterText.value);
   submitBtn.disabled = !requiredInput(enterText.value);
 
@@ -23,6 +22,20 @@ enterText.addEventListener("input", function (e) {
    `;
   wordsAmountBox.innerHTML = "";
   wordsAmountBox.insertAdjacentHTML("beforeend", html);
+
+  if (enterText.value.length > 250) {
+    enterText.classList.add("not-valid");
+    wordsAmountBox.classList.add("num-not-valid");
+  } else {
+    enterText.classList.remove("not-valid");
+    wordsAmountBox.classList.remove("num-not-valid");
+  }
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  document.querySelector(".search-results").classList.remove("disable");
 });
 
 form.addEventListener("reset", function (e) {
@@ -38,3 +51,31 @@ form.addEventListener("reset", function (e) {
   wordsAmountBox.innerHTML = "";
   wordsAmountBox.insertAdjacentHTML("beforeend", html);
 });
+
+// ----------------------------
+const openBtn = document.querySelector("#open-modal");
+const dialog = document.querySelector("#dialog");
+const closeBtn = document.querySelector("#close-modal");
+
+openBtn.addEventListener("click", () => dialog.showModal());
+closeBtn.addEventListener("click", () => dialog.close());
+
+// close modal when clicking outside
+dialog.addEventListener("click", (event) => {
+  const rect = dialog.getBoundingClientRect();
+  const isInDialog =
+    event.clientX >= rect.left &&
+    event.clientX <= rect.right &&
+    event.clientY >= rect.top &&
+    event.clientY <= rect.bottom;
+
+  if (!isInDialog) {
+    dialog.close();
+  }
+});
+
+setTimeout(() => {
+  document.querySelector(".search-results").classList.remove("disable");
+}, 5000);
+
+// ----------------------------
