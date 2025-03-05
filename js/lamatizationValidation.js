@@ -26,6 +26,7 @@ enterText.addEventListener("input", function (e) {
   if (enterText.value.length > 250) {
     enterText.classList.add("not-valid");
     wordsAmountBox.classList.add("num-not-valid");
+    submitBtn.disabled = true;
   } else {
     enterText.classList.remove("not-valid");
     wordsAmountBox.classList.remove("num-not-valid");
@@ -53,11 +54,10 @@ form.addEventListener("reset", function (e) {
 });
 
 // ----------------------------
-const openBtn = document.querySelector("#open-modal");
 const dialog = document.querySelector("#dialog");
 const closeBtn = document.querySelector("#close-modal");
 
-openBtn.addEventListener("click", () => dialog.showModal());
+submitBtn.addEventListener("click", () => dialog.showModal());
 closeBtn.addEventListener("click", () => dialog.close());
 
 // close modal when clicking outside
@@ -73,9 +73,4 @@ dialog.addEventListener("click", (event) => {
     dialog.close();
   }
 });
-
-setTimeout(() => {
-  document.querySelector(".search-results").classList.remove("disable");
-}, 5000);
-
 // ----------------------------

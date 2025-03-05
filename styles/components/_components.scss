@@ -44,16 +44,20 @@ body {
         column-gap: 30px;
 
         div {
-          padding: 10px 23px;
           border-radius: 8px;
           cursor: pointer;
           transition: background-color 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
+          max-height: 42px;
           a {
             font-size: 16px;
             font-weight: 400;
             line-height: 21.76px;
             transition: color 0.3s ease;
+            padding: 10px 23px;
           }
 
           &:nth-child(1) {
@@ -66,10 +70,10 @@ body {
 
           &:nth-child(2) {
             border: 1px solid $text-color-02;
-            padding: 8px 30px;
 
             a {
               color: $text-color-02;
+              padding: 8px 30px;
             }
           }
 
@@ -141,26 +145,26 @@ body {
 
           .see_more {
             border: 1px solid $header-bg-color;
-            padding: 10px 30px;
             border-radius: 8px;
             margin-top: 24px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
 
-            a {
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19.2px;
-              color: $header-bg-color;
-              transition: color 0.3s ease;
-            }
+            padding: 10px 30px;
+
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: $header-bg-color;
+            display: flex;
+            flex: 1;
+            text-align: center;
+            justify-content: center;
 
             &:hover {
               background-color: $header-bg-color;
 
-              a {
-                color: $text-color-02;
-              }
+              color: $text-color-02;
             }
           }
         }

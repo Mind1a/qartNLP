@@ -44,13 +44,18 @@
       </div>
     </header>
     <main>
-      <button id="open-modal">Open modal</button>
-
       <dialog id="dialog">
         <p>უფრო მეტი ტექსტის დამუშავებისთვის გაიარეთ რეგისტრაცია</p>
-        <a href="./authorization.html">რეგისტრაცია</a>
-        <a href="">Sign in with Google</a>
-        <button id="close-modal" class="btn" autofocus>Close</button>
+        <div>
+          <a href="./authorization.html">რეგისტრაცია</a>
+          <a href=""
+            ><img src="../assets/svg/google-logo.svg" alt="google" /> Sign in
+            with Google</a
+          >
+        </div>
+        <button id="close-modal" class="modal-close-btn" autofocus>
+          <img src="../assets/svg/cancel.svg" alt="close" />
+        </button>
       </dialog>
 
       <section class="container">

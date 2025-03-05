@@ -10,19 +10,50 @@ body {
     .container {
       margin-bottom: 150px;
     }
-    dialog {
+
+    dialog[open] {
       margin: auto;
-      padding: 2rem;
+      padding: 68px 56.5px;
       border: none;
       border-radius: 6px;
       opacity: 0;
       transition: all 0.3s allow-discrete;
-
+      font-size: 20px;
+      // font-weight: 350;
+      line-height: 36px;
       position: relative;
-    }
 
-    dialog[open] {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+
       opacity: 1;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        a {
+          padding: 9px;
+          width: 100%;
+          text-align: center;
+          border-radius: 6px;
+        }
+        > a:first-child {
+          background-color: $header-bg-color;
+          color: #fff;
+        }
+        > a:nth-child(2) {
+          border: 1px solid $header-bg-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
     }
 
     @starting-style {
@@ -46,12 +77,12 @@ body {
       }
     }
 
-    .btn {
-      background-color: black;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: 500;
+    .modal-close-btn {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
     }
 
     .description {
