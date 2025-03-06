@@ -1213,6 +1213,7 @@ body main dialog[open] div > a:first-child {
 }
 body main dialog[open] div > a:nth-child(2) {
   border: 1px solid #496ac1;
+  color: #496ac1;
   display: flex;
   justify-content: center;
   align-items: center;
