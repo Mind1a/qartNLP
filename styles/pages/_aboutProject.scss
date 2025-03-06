@@ -1,6 +1,7 @@
 main {
   .aboutProject {
-    margin: 80px 0 150px;
+    @include container;
+    margin: 80px auto;
 
     .introduction {
       h2 {

@@ -520,16 +520,20 @@ body main .section_1_content .buttons {
        column-gap: 30px;
 }
 body main .section_1_content .buttons div {
-  padding: 10px 23px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 42px;
 }
 body main .section_1_content .buttons div a {
   font-size: 16px;
   font-weight: 400;
   line-height: 21.76px;
   transition: color 0.3s ease;
+  padding: 10px 23px;
 }
 body main .section_1_content .buttons div:nth-child(1) {
   background-color: #e6e6e6;
@@ -539,10 +543,10 @@ body main .section_1_content .buttons div:nth-child(1) a {
 }
 body main .section_1_content .buttons div:nth-child(2) {
   border: 1px solid #ffffff;
-  padding: 8px 30px;
 }
 body main .section_1_content .buttons div:nth-child(2) a {
   color: #ffffff;
+  padding: 8px 30px;
 }
 body main .section_1_content .buttons div:hover {
   background-color: #496ac1;
@@ -602,23 +606,22 @@ body main .opportunities_section .blocks .block:nth-child(5), body main .opportu
 }
 body main .opportunities_section .blocks .block .see_more {
   border: 1px solid #496ac1;
-  padding: 10px 30px;
   border-radius: 8px;
   margin-top: 24px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-body main .opportunities_section .blocks .block .see_more a {
+  transition: all 0.3s ease;
+  padding: 10px 30px;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
   color: #496ac1;
-  transition: color 0.3s ease;
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
 }
 body main .opportunities_section .blocks .block .see_more:hover {
   background-color: #496ac1;
-}
-body main .opportunities_section .blocks .block .see_more:hover a {
   color: #ffffff;
 }
 
@@ -677,7 +680,8 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   color: #2c2c2c;
   margin-bottom: 8px;
 }
-.body .container .cancel, .body .container .cancel-white {
+.body .container .cancel,
+.body .container .cancel-white {
   position: absolute;
   top: 48px;
   right: 48px;
@@ -967,6 +971,84 @@ body main .opportunities_section .blocks .block .see_more:hover a {
   display: flex !important;
 }
 
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#password1 {
+  position: relative;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 8px;
+}
+
+.slash {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transform-origin: center;
+}
+
+.hidden .slash {
+  opacity: 1;
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
+.error-icon path {
+  stroke: red !important;
+}
+
+.error-icon .slash {
+  background: red !important;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.eye-icon svg {
+  pointer-events: none;
+}
+
 body .main-sucess {
   display: flex;
   align-items: center;
@@ -1094,8 +1176,79 @@ body {
 body main {
   flex: 1;
 }
+body main .container {
+  margin-bottom: 150px;
+}
+body main dialog[open] {
+  margin: auto;
+  padding: 68px 56.5px;
+  border: none;
+  border-radius: 6px;
+  opacity: 0;
+  transition: all 0.3s allow-discrete;
+  font-size: 20px;
+  line-height: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  opacity: 1;
+}
+body main dialog[open] div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+body main dialog[open] div a {
+  padding: 9px;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+}
+body main dialog[open] div > a:first-child {
+  background-color: #496ac1;
+  color: #fff;
+}
+body main dialog[open] div > a:nth-child(2) {
+  border: 1px solid #496ac1;
+  color: #496ac1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@starting-style {
+  body main dialog[open] {
+    opacity: 0;
+  }
+}
+body main dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s allow-discrete;
+}
+body main dialog[open]::backdrop {
+  background-color: rgba(209, 209, 209, 0.281);
+}
+@starting-style {
+  body main dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+body main .modal-close-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+body main .description {
+  max-width: 40ch;
+  margin: 1rem 0;
+}
 body main .hero-section-enterText {
-  margin: 80px 0 150px;
+  margin: 80px auto 26px 0;
 }
 body main .hero-section-enterText .label-box {
   display: flex;
@@ -1114,6 +1267,9 @@ body main .hero-section-enterText .label-box .words-Amount-Box {
   font-size: 16px;
   color: #2c2c2c;
   margin: 0 10px 10px 0;
+}
+body main .hero-section-enterText .label-box .words-Amount-Box.num-not-valid {
+  color: #e73b37;
 }
 body main .hero-section-enterText .form-container {
   max-width: 1180px;
@@ -1144,19 +1300,24 @@ body main .hero-section-enterText .btn-container input {
   font-size: 16px;
   font-weight: 500;
   color: #496ac1;
+  transition: background-color 0.3s ease;
+}
+body main .hero-section-enterText .btn-container input:disabled {
+  opacity: 0.5;
 }
 body main .hero-section-enterText .btn-container :nth-child(2) {
   background-color: #496ac1;
   color: #ffffff;
 }
-body main .hero-section-enterText .btn-container .btn-analize:hover,
-body main .hero-section-enterText .btn-container .btn-analize:active {
+body main .hero-section-enterText .btn-container .btn-analize:not(:disabled):hover,
+body main .hero-section-enterText .btn-container .btn-analize:not(:disabled):active {
   cursor: pointer;
   background-color: #496ac1;
 }
-body main .hero-section-enterText .btn-container .btn-clear:hover,
-body main .hero-section-enterText .btn-container .btn-clear:active {
+body main .hero-section-enterText .btn-container .btn-clear:not(:disabled):hover,
+body main .hero-section-enterText .btn-container .btn-clear:not(:disabled):active {
   color: #496ac1;
+  color: #fff;
   background-color: #496ac1;
   cursor: pointer;
 }
@@ -1164,11 +1325,43 @@ body main .is-valid {
   border: 2.5px solid green;
 }
 body main .not-valid {
-  border: 2.5px solid red;
+  border: 2.5px solid red !important;
+}
+body main .search-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 16px;
+  margin-bottom: 60px;
+}
+body main .search-results.disable {
+  display: none;
+}
+body main .search-results article {
+  color: #2c2c2c;
+  background-color: #eae9e9;
+  padding: 20px 50px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .search-results article h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+body main .search-results article div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 main .aboutProject {
-  margin: 80px 0 150px;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 80px auto;
 }
 main .aboutProject .introduction h2 {
   font-size: 28px;
