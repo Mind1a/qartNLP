@@ -328,26 +328,14 @@ resetPasswordForm.addEventListener("submit", (e) => {
 });
 
 function resetPasswordErrors(password, resetPassword) {
-  const resetFormPasswordLabel = document.getElementById(
-    "resetform-password-label"
-  );
+  const resetFormPasswordLabel = document.getElementById("resetform-password-label");
   const resetPasswordLabel = document.getElementById("reset-password-label");
-  const resetFormHideIcon = document.getElementById(
-    "resetform-password-hide-password"
-  );
-  const resetFormErrorHideIcon = document.getElementById(
-    "resetfrom-password-error-hide"
-  );
+  const resetFormHideIcon = document.getElementById("resetform-password-hide-password");
+  const resetFormErrorHideIcon = document.getElementById("resetfrom-password-error-hide");
   const resetHideIcon = document.getElementById("reset-password-hide-password");
-  const resetErrorHideIcon = document.getElementById(
-    "reset-password-error-hide"
-  );
-  const passwordErrorMessage = document.getElementById(
-    "reset-resetPassword-error-message"
-  );
-  const resetPasswordErrorMessage = document.getElementById(
-    "reset-password-error-message"
-  );
+  const resetErrorHideIcon = document.getElementById("reset-password-error-hide");
+  const passwordErrorMessage = document.getElementById("reset-resetPassword-error-message");
+  const resetPasswordErrorMessage = document.getElementById("reset-password-error-message");
 
   let passwordErrors = [];
   let resetPasswordErrors = [];

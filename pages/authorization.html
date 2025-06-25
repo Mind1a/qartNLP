@@ -21,16 +21,16 @@
         <form id="authorization-form" novalidate>
           <h2>ავტორიზაცია</h2>
           <label for="email-input" id="email-label">ელ.ფოსტა</label>
-          <input type="email" id="email-input" name="email" />
+          <input type="email" id="authorization-email-input" name="email" />
           <p class="error-message" id="email-error-message"></p>
-          <label for="password-input" id="password-label">პაროლი</label>
+          <label for="password1" id="password-label">პაროლი</label>
           <!--  -->
           <div class="password password-container" id="password-input-id">
-            <input type="password" id="password1" name="password" />
-            <div id="toggleEye1" class="eye-icon">
+            <input type="password" id="authorization-password" name="password" />
+            <div id="authorization-toggleEye" class="eye-icon">
               <svg
-                width="24"
-                height="24"
+                width="17"
+                height="17"
                 viewBox="0 0 17 17"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,34 +91,60 @@
               >ახალი პაროლი *</label
             >
             <div class="password">
-              <input type="password" id="resetform-password-input" />
-              <img
-                src="../assets/svg/hide.svg"
-                id="resetform-password-hide-password"
-                class="password-icon"
-              />
-              <img
-                src="../assets/svg/errorhide.svg"
-                id="resetfrom-password-error-hide"
-                class="password-error-icon"
-              />
+              <input type="password" id="resolve-password" name="password" />
+              <div id="resolve-password-toggleEye" class="eye-icon">
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                    stroke="#2C2C2C"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                    stroke="#2C2C2C"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="slash"></div>
+              </div>
             </div>
             <p class="error-message" id="reset-resetPassword-error-message"></p>
             <label for="reset-password-input" id="reset-password-label"
               >გაიმეორეთ პაროლი *</label
             >
             <div class="password">
-              <input type="password" id="reset-password-input" />
-              <img
-                src="../assets/svg/hide.svg"
-                id="reset-password-hide-password"
-                class="password-icon"
-              />
-              <img
-                src="../assets/svg/errorhide.svg"
-                id="reset-password-error-hide"
-                class="password-error-icon"
-              />
+              <input type="password" id="reset-password" name="password" />
+              <div id="reset-password-toggleEye" class="eye-icon">
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                    stroke="#2C2C2C"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                    stroke="#2C2C2C"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="slash"></div>
+              </div>
             </div>
             <p class="error-message" id="reset-password-error-message"></p>
             <button type="submit" id="save">შენახვა</button>
@@ -235,6 +261,6 @@
       </div>
     </div>
 
-    <script src="../js/authorization.js"></script>
+    <script src="../js/test-autho.js"></script>
   </body>
 </html>
