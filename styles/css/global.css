@@ -117,7 +117,7 @@ section {
 
 body {
   line-height: 1;
-  font-family: "Work Sans", sans-serif;
+  font-family: "NotoSansGeorgian", sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -235,17 +235,14 @@ body header .header_wrapper .container .navigation nav ul .toggle-language .togg
   text-align: center;
   line-height: 30px;
   color: #ffffff;
-  font-weight: bold;
 }
 body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-on {
   left: -12px;
   color: #496ac1;
-  font-size: 14px;
 }
 body header .header_wrapper .container .navigation nav ul .toggle-language .toggle-label .toggle-label-off {
   right: -12px;
   color: #496ac1;
-  font-size: 14px;
 }
 
 footer {
@@ -265,7 +262,7 @@ footer .footer-wrapper {
 footer .footer-wrapper .privacy {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 footer .footer-wrapper .privacy a {
   line-height: 24px;

@@ -92,19 +92,16 @@ body {
                     text-align: center;
                     line-height: 30px;
                     color: $text-color-02;
-                    font-weight: bold;
                   }
 
                   .toggle-label-on {
                     left: -12px;
                     color: $header-bg-color;
-                    font-size: 14px;
                   }
 
                   .toggle-label-off {
                     right: -12px;
                     color: $header-bg-color;
-                    font-size: 14px;
                   }
                 }
               }
