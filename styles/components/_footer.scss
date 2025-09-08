@@ -18,6 +18,12 @@ footer {
       a {
         line-height: 24px;
         color: $text-color-02;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $transparentsnow;
+        }
       }
     }
 
@@ -26,8 +32,11 @@ footer {
       flex-direction: row;
       align-items: center;
       gap: 40px;
+      
       a {
         width: 100%;
+        display: flex;
+        align-items: center;
 
         .unilab {
           width: 57px;
@@ -40,5 +49,19 @@ footer {
         }
       }
     }
+  }
+}
+
+// Hide footer when burger menu is visible (834px and below)
+@media only screen and (max-width: 834px) {
+  footer {
+    display: none !important;
+  }
+}
+
+// Alternative: Hide footer only when menu is open
+body.menu-open {
+  footer {
+    display: none !important;
   }
 }
